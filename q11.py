@@ -1,3 +1,9 @@
+# I am using the first 7 non-zero terms of the Maclaurin expansion for sine.
+# The sine function is a periodic function with fundamental period 2pi.
+# Therefore, we can take any real number and compute its equivalent in
+# the range -pi and pi. This allows us to find the value of the sine function
+# for any real number.
+
 import math
 
 def sin(x):

@@ -1,6 +1,3 @@
-# 12. Write a function that returns the sum of the first n numbers of the
-# Fibonacci Sequence. The first 2 numbers in the sequence are 1, 1.
-
 # I am using the closed-form expression for the Fibonacci Sequence to get the
 # exact value at index n without having to compute all the previous elements of
 # the sequence.
