@@ -8,7 +8,8 @@ def product_relation(S):
             for c in S.difference({a,b}):
                 for d in S.difference({a,b,c}):
                     if a*b == c*d:
-                        M.add(((a, b) ,(c, d)))
+                        # M.add(((a, b), (c, d)))
+                        M.add(frozenset([a, b, c, d]))
 
     return M
 
