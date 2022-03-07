@@ -10,7 +10,7 @@
 # finite, we could make the algorithm O(1) by alwalys making iterate a
 # sufficient number of times for all the values in a given domain.
 
-import math
+from math import floor
 
 # This function is the acutal answer.
 def newton_sqrt(n):
@@ -19,7 +19,7 @@ def newton_sqrt(n):
 
     x = n
 
-    for i in range(max(math.floor(n), 5)):
+    for i in range(max(floor(n), 5)):
         x = x - (x**2 - n) / (2*x)
 
     return x
@@ -32,7 +32,7 @@ def halley_sqrt(n):
 
     x = n
 
-    for i in range(math.floor(n)):
+    for i in range(floor(n)):
         x = x - (2*(x**2 - n)*(2*x)) / (8*(x**2) - 2*(x**2 - n))
 
     return x

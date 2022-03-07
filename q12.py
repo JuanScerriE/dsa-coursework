@@ -6,10 +6,11 @@
 # the sequence to get the exact sum at index n without having to add all
 # previous elements. This makes the algorithm O(1).
 
-import math
+from math import floor
+from math import sqrt
 
 def fib(n):
-    return math.floor((((1 + math.sqrt(5)) / 2) ** n) / math.sqrt(5) + 0.5)
+    return floor((((1 + sqrt(5)) / 2) ** n) / sqrt(5) + 0.5)
 
 def sum_fib(n):
     return fib(n + 2) - 1
