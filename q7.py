@@ -23,6 +23,21 @@ class Node:
             else:
                 self.left.add(node)
 
+    # I need to explain this algorithm otherwise I will forget what I am doing.
+    # So basically, I arrived at this algorithm by a process of convergence and
+    # experimentation I was not sure if I could do this But I realised that
+    # instead of for example passing the number of spaces for padding as a
+    # parameter to draw() we can just pass the string to pad with. This gives
+    # us a lot of control. Effectively, if we branch to the right we want to
+    # first draw the rest of the branch and then draw our element so the tree
+    # is balanced. The final character of our padding is `|` this allows us to
+    # create the connection. However, after two successive right draws the '|'
+    # must be removed and a new one should be added. The same goes for two
+    # successive lefts. If we have a right and left or a left and a right we
+    # keep the pipe where it is because that would be in the inner part of the
+    # tree. This is what the parent parameter is for. I think that is the gist.
+    # I should be able to remember it.
+
     def draw(self, s, parent):
         if self.right != None:
             if parent == Branch.Right or parent == Branch.Root:
@@ -43,25 +58,19 @@ class Node:
                 self.left.draw(s[:(len(s) - 1)] + "|" + " " * len(str(self.value)) + " |", Branch.Left)
 
 
-root = Node(7)
+root = None
 
-root.add(Node(5))
-root.add(Node(4))
-root.add(Node(6))
-root.add(Node(10))
-root.add(Node(9))
-root.add(Node(8))
-root.add(Node(13))
-root.add(Node(12))
-root.add(Node(-2))
-root.add(Node(1))
-root.add(Node(34))
-root.add(Node(7))
-root.add(Node(-42))
-root.add(Node(14))
-root.add(Node(3))
+while True:
+    x = input("Input integer (or anything else to quit): ")
 
-print(root.get_depth())
-print(root.right.depth)
+    try:
+        x = int(x)
 
-root.draw("", Branch.Root)
+        if root == None:
+            root = Node(x)
+        else:
+            root.add(Node(x))
+    except:
+        break
+
+    root.draw("", Branch.Root)
