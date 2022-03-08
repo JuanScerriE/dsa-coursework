@@ -41,26 +41,22 @@ class Node:
 
     def draw(self, s, parent):
         if self.right != None:
-            m_s = s[:(len(s) - 1)]
             if parent == Branch.Right or parent == Branch.Root:
-                m_s += " " + " " * len(str(self.value))
+                self.right.draw(s[:(len(s) - 1)] + " " + " " * len(str(self.value)) + " |", Branch.Right)
+                print(s[:(len(s) - 1)] + " " + " " * len(str(self.value)) + "/")
             else:
-                m_s += "|" + " " * len(str(self.value))
-
-            self.right.draw(m_s + " |", Branch.Right)
-            print(m_s + "/")
+                self.right.draw(s[:(len(s) - 1)] + "|" + " " * len(str(self.value)) + " |", Branch.Right)
+                print(s[:(len(s) - 1)] + "\\" + " " * len(str(self.value)) + "/")
 
         print(s[:(len(s) - 1)] + " " + str(self.value))
 
         if self.left != None:
-            m_s = s[:(len(s) - 1)]
             if parent == Branch.Left or parent == Branch.Root:
-                m_s += " " + " " * len(str(self.value))
+                print(s[:(len(s) - 1)] + " " + " " * len(str(self.value)) + "\\")
+                self.left.draw(s[:(len(s) - 1)] + " " + " " * len(str(self.value)) + " |", Branch.Left)
             else:
-                m_s += "|" + " " * len(str(self.value))
-
-            print(m_s + "\\")
-            self.left.draw(m_s + " |", Branch.Left)
+                print(s[:(len(s) - 1)] + "/" + " " * len(str(self.value)) + "\\")
+                self.left.draw(s[:(len(s) - 1)] + "|" + " " * len(str(self.value)) + " |", Branch.Left)
 
 
 root = Node(7)
