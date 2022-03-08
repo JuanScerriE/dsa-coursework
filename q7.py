@@ -8,7 +8,6 @@ class Branch(Enum):
 class Node:
     def __init__(self, value):
         self.value = value
-        self.depth = 1
         self.left = None
         self.right = None
 
@@ -23,21 +22,6 @@ class Node:
                 self.left = node
             else:
                 self.left.add(node)
-
-    def get_depth(self):
-        if self.left != None and self.right != None:
-            left_depth = self.left.get_depth()
-            right_depth = self.right.get_depth()
-
-            self.depth += left_depth if left_depth > right_depth else right_depth
-        
-        if self.left != None and self.right == None:
-            self.depth += self.left.get_depth()
-
-        if self.left == None and self.right != None:
-            self.depth += self.right.get_depth()
-
-        return self.depth
 
     def draw(self, s, parent):
         if self.right != None:
