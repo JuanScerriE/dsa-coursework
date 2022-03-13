@@ -2,48 +2,57 @@
 
 % PACKAGES
 
-\usepackage[siunitx]{circuitikz}
+% \usepackage[siunitx]{circuitikz}
+% \usepackage{pgfornament}
+% \usepackage{fancyvrb}
 \usepackage[
 top	= 2.50cm,
 bottom = 2.50cm,
-left   = 2cm,
-right  = 2cm,
+left = 2cm,
+right = 2cm,
 marginparsep = 0pt,
-marginparwidth=0pt,]{geometry}
-\usepackage{pgfornament, fancyhdr}
+marginparwidth =0pt]{geometry}
+\usepackage{fancyhdr}
 \usepackage{float}
-\usepackage{amsmath, textcomp}
-\usepackage{ulem, contour}
-\usepackage{graphicx, svg, xcolor}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{ulem}
+\usepackage{contour}
+\usepackage{graphicx}
+\usepackage{svg}
+\usepackage{xcolor}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenx}
 \usepackage[unicode]{hyperref}
 \usepackage[shortlabels]{enumitem}
-\usepackage{booktabs, bookmark, listings, xcolor}
-\usepackage{fancyvrb}
+\usepackage{booktabs}
+\usepackage{bookmark}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{tocloft}
 
 % MACROS & DEFS
 
-\newcommand{\splitmark}[2]{(#1)
-	node[circle, fill, inner sep=0pt, outer sep=0pt,
-	minimum size=2*#2]{}%
-}
+% \newcommand{\splitmark}[2]{(#1)
+% 	node[circle, fill, inner sep=0pt, outer sep=0pt,
+% 	minimum size=2*#2]{}%
+% }
 
-\newcommand{\jumpD}[2]{([shift={(0mm,#2)}]#1)
-	arc[start angle=90, end angle=-90, radius=#2]%
-}
+% \newcommand{\jumpD}[2]{([shift={(0mm,#2)}]#1)
+% 	arc[start angle=90, end angle=-90, radius=#2]%
+% }
 
-\newcommand{\jumpU}[2]{([shift={(0mm,-#2)}]#1)
-	arc[start angle=-90, end angle=90, radius=#2]%
-}
+% \newcommand{\jumpU}[2]{([shift={(0mm,-#2)}]#1)
+% 	arc[start angle=-90, end angle=90, radius=#2]%
+% }
 
-\newcommand{\jumpR}[2]{([shift={(-#2,0)}]#1)
-	arc[start angle=180, end angle=0, radius=#2]%
-}
+% \newcommand{\jumpR}[2]{([shift={(-#2,0)}]#1)
+% 	arc[start angle=180, end angle=0, radius=#2]%
+% }
 
-\newcommand{\jumpL}[2]{([shift={(#2,0)}]#1)
-	arc[start angle= 0, end angle= 180, radius= #2]%
-}
+% \newcommand{\jumpL}[2]{([shift={(#2,0)}]#1)
+% 	arc[start angle= 0, end angle= 180, radius= #2]%
+% }
 
 \DeclareRobustCommand{\ul}[1]{%
 	\uline{\phantom{#1}}%
@@ -62,7 +71,7 @@ marginparwidth=0pt,]{geometry}
 
 % PACKAGE CONFIG
 
-\usetikzlibrary{calc, arrows, positioning, circuits.logic.US}
+% \usetikzlibrary{calc, arrows, positioning, circuits.logic.US}
 \graphicspath{ {./images/} }
 
 \lstdefinestyle{code}{
@@ -91,17 +100,20 @@ marginparwidth=0pt,]{geometry}
 
 \lstset{style=code}
 
+% Set dots for table of contents
+\renewcommand{\cftdot}{.}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
 % HEADER & FOOTER
 
 \setlength{\headheight}{15pt}
-
 \pagestyle{fancy}
 \fancyhf{}
-\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0.25pt}
 \lhead{J. Scerri}
 \chead{ICT1018 --- Assignment}
 \rhead{\thepage}
-\cfoot{\pgfornament[scale=.35]{84}}
+% \cfoot{\pgfornament[scale=.35]{84}}
 
 % TITLE
 
@@ -115,27 +127,34 @@ B.Sc. (Hons)(Melit.) Computing Science and Mathematics (First Year)}
 
 \begin{document}
 
-%----------------------------------------------------------------------------------------
+%----------------------------------
 %	TITLE PAGE
-%----------------------------------------------------------------------------------------
+%----------------------------------
 
 \maketitle % Print the title page
 
 \thispagestyle{empty} % Suppress headers and footers on the title page
 
-% \newpage
+%----------------------------------
 
-%----------------------------------------------------------------------------------------
-% \tableofcontents
+\tableofcontents
+\clearpage
 
 % \lstlistoflistings\\
 
-\section{Link to the Project}
-
-The project is being hosted on GitLab, in a private repository (link below). 
-
-\begin{itemize}
-\item \url{https://gitlab.com/JuanScerriE/cps1011-assignment}
-\end{itemize}
+\section{Plagiarism Declaration}
+\section{Statement of Completion}
+\section{\textit{Question 1:} Shellsort \& Quicksort}
+\section{\textit{Question 2:} Merging Sorted Arrays}
+\section{\textit{Question 3:} Finding Extremes}
+\section{\textit{Question 4:} Product Relation}
+\section{\textit{Question 5:} \texttt{RPN} Calculator}
+\section{\textit{Question 6:} Finding Primes}
+\section{\textit{Question 7:} Building a Binary Search Tree}
+\section{\textit{Question 8:} Square Root Approximation}
+\section{\textit{Question 9:} Finding Duplicates}
+\section{\textit{Question 10:} Recursive \texttt{max()}}
+\section{\textit{Question 11:} Cosine/Sine Approximation}
+\section{\textit{Question 12:} Fibonacci Sums}
 
 \end{document}
