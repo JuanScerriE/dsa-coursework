@@ -6,17 +6,18 @@
 # `max_2` is similar to `max` if just eliminates the need for the third
 # recursive call.
 
+
 def max(list):
     if len(list) == 1:
         return [list[0]]
     elif len(list) == 2:
         return [list[0]] if list[0] > list[1] else [list[1]]
     else:
-        return max(max(list[:len(list)//2]) + max(list[len(list)//2:]))
+        return max(max(list[: len(list) // 2]) + max(list[len(list) // 2 :]))
 
 
 def half(list):
-    return list[:len(list)//2], list[len(list)//2:]
+    return list[: len(list) // 2], list[len(list) // 2 :]
 
 
 def max_2(list):

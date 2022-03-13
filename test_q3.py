@@ -4,12 +4,12 @@ import random
 
 print("Extremes Test\n")
 
-if [5,3,8,7,15] == q3.extremes([0,5,3,6,8,7,15,9]):
+if [5, 3, 8, 7, 15] == q3.extremes([0, 5, 3, 6, 8, 7, 15, 9]):
     print("Test Passed")
 else:
     print("Test Failed")
 
-if [] == q3.extremes([0,3,5,6,7,8,9,15]):
+if [] == q3.extremes([0, 3, 5, 6, 7, 8, 9, 15]):
     print("Test Passed")
 else:
     print("Test Failed")

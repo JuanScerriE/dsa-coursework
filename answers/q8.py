@@ -20,7 +20,7 @@ def newton_sqrt(n):
     x = n
 
     for i in range(max(floor(n), 5)):
-        x = x - (x**2 - n) / (2*x)
+        x = x - (x**2 - n) / (2 * x)
 
     return x
 
@@ -34,6 +34,6 @@ def halley_sqrt(n):
     x = n
 
     for i in range(floor(n)):
-        x = x - (2*(x**2 - n)*(2*x)) / (8*(x**2) - 2*(x**2 - n))
+        x = x - (2 * (x**2 - n) * (2 * x)) / (8 * (x**2) - 2 * (x**2 - n))
 
     return x

@@ -40,17 +40,19 @@ from math import ceil
 # automatically implies that it is either prime or has a factor which is
 # smaller than our index.
 
+
 def f_sieve(limit):
     # Optimistaion 1
     N = [False, True] * ((limit + 1) // 2)
 
-    N[1] = False; N[2] = True
+    N[1] = False
+    N[2] = True
 
     # Optimisation 2
     for n in range(3, int(ceil(sqrt(limit))), 2):
         if N[n]:
             # Optimistaion 3
-            for m in range(n*n, limit, n):
+            for m in range(n * n, limit, n):
                 N[m] = False
 
     P = []
@@ -71,7 +73,6 @@ def sieve(n):
     if n == 2:
         return prime_list
 
-
     # Finding all primes smaller than sqrt(n).
 
     # Note: the upperbound will be ceil(sqrt(n)) since e.g. sqrt(24) ~ 4.89
@@ -87,10 +88,9 @@ def sieve(n):
             if x % prime == 0:
                 is_prime = False
                 break
-        
+
         if is_prime:
             prime_list.append(x)
-
 
     count = len(prime_list)
 
@@ -115,11 +115,11 @@ def is_prime(n):
 
     if n == 2:
         return True
-    
+
     # We check if it is even and not 2. If so then is it is definitely not
     # prime.
     if n % 2 == 0:
-        return False 
+        return False
 
     # All prime factors of n are smaller than sqrt(n). Therefore if i is a
     # prime factor of n then i <= sqrt(n).

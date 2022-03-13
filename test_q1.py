@@ -3,18 +3,18 @@ import random
 
 print("Shellsort Test")
 
-test = [0,1,1,5,3,6,8,7,15,9]
+test = [0, 1, 1, 5, 3, 6, 8, 7, 15, 9]
 q1.shellsort(test)
-if [0,1,1,3,5,6,7,8,9,15] == test:
+if [0, 1, 1, 3, 5, 6, 7, 8, 9, 15] == test:
     print("Test Passed")
 else:
     print("Test Failed")
 
 print("\nQuicksort Test")
 
-test = [0,1,1,5,3,6,8,4,11,9]
+test = [0, 1, 1, 5, 3, 6, 8, 4, 11, 9]
 q1.quicksort(test, 0, len(test) - 1)
-if [0,1,1,3,4,5,6,8,9,11] == test:
+if [0, 1, 1, 3, 4, 5, 6, 8, 9, 11] == test:
     print("Test Passed\n")
 else:
     print("Test Failed\n")

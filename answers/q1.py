@@ -1,11 +1,12 @@
 import math
 import random
 
+
 def swap(a, x, y):
     t = a[x]
     a[x] = a[y]
     a[y] = t
- 
+
 
 def nexth(n, m):
     return 2 * int(math.floor(n / 2 ** (m + 1))) + 1
@@ -30,8 +31,8 @@ def shellsort(a):
         if h == 1:
             break
 
-        h = nexth(n, m) 
-   
+        h = nexth(n, m)
+
     return a
 
 
@@ -46,11 +47,12 @@ def pivot(a, i, j):
         n.append(a[k])
 
     shellsort(n)
-    
+
     return n[3]
 
+
 # The partitioning scheme being used is the Hoare partitioning
-# scheme. 
+# scheme.
 def partition(a, i, j):
     p = pivot(a, i, j)
     i -= 1

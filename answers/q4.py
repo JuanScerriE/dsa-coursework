@@ -1,4 +1,4 @@
-class ProductTriple():
+class ProductTriple:
     def __init__(self, a, b):
         self.a = a
         self.b = b
@@ -30,7 +30,7 @@ def merge(a, b):
         else:
             c.append(b[j])
             j += 1
-        
+
     return c
 
 
@@ -39,7 +39,7 @@ def mergesort(a):
 
     if len(a) == 1:
         return a
-    
+
     b = mergesort(a[:mid])
     c = mergesort(a[mid:])
 
@@ -56,12 +56,12 @@ def find_products(a):
     # The maximum size of products is n * (n - 1) / 2 where n is the number of
     # unique elements in the array.
     products = []
-    
+
     prev_outer = a[0]
 
     # We make sure to end one less since we do not need to check
     # the last one.
-    # 
+    #
     # This loop is used to generate all the triples which we need.
     # Specifically, It allows us to generate triples where, the last
     # element is the product of the first two. Moreover, we generate
@@ -73,7 +73,7 @@ def find_products(a):
     # and the inner loop.
     for i in range(len(a) - 1):
         if prev_outer < a[i] or i == 0:
-            prev_inner = a[i] 
+            prev_inner = a[i]
             # We do not check the product of the previous
             # elements because they have already been accounted
             # for by previous iterations. The best to illustrate

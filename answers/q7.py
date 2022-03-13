@@ -1,9 +1,11 @@
 from enum import Enum
 
+
 class Branch(Enum):
     Left = 0
     Root = 1
     Right = 2
+
 
 class Node:
     def __init__(self, value):
@@ -41,18 +43,30 @@ class Node:
     def draw(self, s, parent):
         if self.right != None:
             if parent == Branch.Right or parent == Branch.Root:
-                self.right.draw(s[:(len(s) - 1)] + " " + " " * len(str(self.value)) + " |", Branch.Right)
-                print(s[:(len(s) - 1)] + " " + " " * len(str(self.value)) + "/")
+                self.right.draw(
+                    s[: (len(s) - 1)] + " " + " " * len(str(self.value)) + " |",
+                    Branch.Right,
+                )
+                print(s[: (len(s) - 1)] + " " + " " * len(str(self.value)) + "/")
             else:
-                self.right.draw(s[:(len(s) - 1)] + "|" + " " * len(str(self.value)) + " |", Branch.Right)
-                print(s[:(len(s) - 1)] + "\\" + " " * len(str(self.value)) + "/")
+                self.right.draw(
+                    s[: (len(s) - 1)] + "|" + " " * len(str(self.value)) + " |",
+                    Branch.Right,
+                )
+                print(s[: (len(s) - 1)] + "\\" + " " * len(str(self.value)) + "/")
 
-        print(s[:(len(s) - 1)] + " " + str(self.value))
+        print(s[: (len(s) - 1)] + " " + str(self.value))
 
         if self.left != None:
             if parent == Branch.Left or parent == Branch.Root:
-                print(s[:(len(s) - 1)] + " " + " " * len(str(self.value)) + "\\")
-                self.left.draw(s[:(len(s) - 1)] + " " + " " * len(str(self.value)) + " |", Branch.Left)
+                print(s[: (len(s) - 1)] + " " + " " * len(str(self.value)) + "\\")
+                self.left.draw(
+                    s[: (len(s) - 1)] + " " + " " * len(str(self.value)) + " |",
+                    Branch.Left,
+                )
             else:
-                print(s[:(len(s) - 1)] + "/" + " " * len(str(self.value)) + "\\")
-                self.left.draw(s[:(len(s) - 1)] + "|" + " " * len(str(self.value)) + " |", Branch.Left)
+                print(s[: (len(s) - 1)] + "/" + " " * len(str(self.value)) + "\\")
+                self.left.draw(
+                    s[: (len(s) - 1)] + "|" + " " * len(str(self.value)) + " |",
+                    Branch.Left,
+                )

@@ -85,8 +85,8 @@ def get_num(peek_expr):
 
     floating = False
 
-    while '0' <= peek_expr.peek() <= '9' or peek_expr.peek() == '.':
-        if peek_expr.peek() == '.':
+    while "0" <= peek_expr.peek() <= "9" or peek_expr.peek() == ".":
+        if peek_expr.peek() == ".":
             if not floating:
                 floating = True
             else:
@@ -95,6 +95,7 @@ def get_num(peek_expr):
         val += peek_expr.next()
 
     return Token("NUM", float(val))
+
 
 def get_opr(peek_expr):
     return Token("OPR", peek_expr.next())
@@ -106,15 +107,15 @@ def lex(expr):
     tok_list = []
 
     while peek_expr.peek() != None:
-        if peek_expr.peek() == ' ':
+        if peek_expr.peek() == " ":
             peek_expr.next()
-        elif peek_expr.peek() in { '+', '-', '*', '/' }:
+        elif peek_expr.peek() in {"+", "-", "*", "/"}:
             tok_list.append(get_opr(peek_expr))
-        elif '0' <= peek_expr.peek() <= '9' or peek_expr.peek() == '.':
+        elif "0" <= peek_expr.peek() <= "9" or peek_expr.peek() == ".":
             tok_list.append(get_num(peek_expr))
         else:
             raise Exception("InvalidExpression")
-    
+
     return tok_list
 
 
@@ -129,17 +130,17 @@ def evaluate(tok_list):
             a = stack.pop()
             b = stack.pop()
 
-            if opr == '+':
+            if opr == "+":
                 stack.push(a + b)
-            elif opr == '-':
+            elif opr == "-":
                 stack.push(b - a)
-            elif opr == '*':
+            elif opr == "*":
                 stack.push(a * b)
-            elif opr == '/':
+            elif opr == "/":
                 stack.push(b / a)
-            else: # This can never happen.
+            else:  # This can never happen.
                 raise Exception("UnknownError")
-        else: # This can never happen.
+        else:  # This can never happen.
             raise Exception("UnknownError")
 
         stack.out()

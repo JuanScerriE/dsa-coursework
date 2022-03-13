@@ -11,7 +11,7 @@ if 2.2361 == round(q8.newton_sqrt(5), 4):
     print("Test Passed")
 else:
     print("Test Failed")
-    
+
 if 3.1623 == round(q8.newton_sqrt(10), 4):
     print("Test Passed")
 else:
@@ -28,7 +28,7 @@ if 2.2361 == round(q8.halley_sqrt(5), 4):
     print("Test Passed")
 else:
     print("Test Failed")
-    
+
 if 3.1623 == round(q8.halley_sqrt(10), 4):
     print("Test Passed")
 else:

@@ -4,15 +4,15 @@ import random
 
 print("Merge Test")
 
-test1 = [0,1,1,5,3,6,8,7,15,9]
+test1 = [0, 1, 1, 5, 3, 6, 8, 7, 15, 9]
 q1.shellsort(test1)
 
-test2 = [0,1,1,5,3,6,8,4,11,9]
+test2 = [0, 1, 1, 5, 3, 6, 8, 4, 11, 9]
 q1.quicksort(test2, 0, len(test2) - 1)
 
 test = q2.merge(test1, test2)
 
-if [0,0,1,1,1,1,3,3,4,5,5,6,6,7,8,8,9,9,11,15] == test:
+if [0, 0, 1, 1, 1, 1, 3, 3, 4, 5, 5, 6, 6, 7, 8, 8, 9, 9, 11, 15] == test:
     print("Test Passed\n")
 else:
     print("Test Failed\n")

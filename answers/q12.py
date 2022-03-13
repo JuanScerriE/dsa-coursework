@@ -9,8 +9,10 @@
 from math import floor
 from math import sqrt
 
+
 def fib(n):
     return floor((((1 + sqrt(5)) / 2) ** n) / sqrt(5) + 0.5)
+
 
 def sum_fib(n):
     return fib(n + 2) - 1

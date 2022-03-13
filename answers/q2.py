@@ -11,5 +11,5 @@ def merge(a, b):
         else:
             c.append(b[j])
             j += 1
-        
+
     return c
