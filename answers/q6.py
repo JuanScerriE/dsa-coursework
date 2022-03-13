@@ -47,7 +47,7 @@ def f_sieve(limit):
     N[1] = False; N[2] = True
 
     # Optimisation 2
-    for n in range(3, ceil(sqrt(limit)), 2):
+    for n in range(3, int(ceil(sqrt(limit))), 2):
         if N[n]:
             # Optimistaion 3
             for m in range(n*n, limit, n):
@@ -60,7 +60,6 @@ def f_sieve(limit):
             P.append(n)
 
     return P
-
 
 
 def sieve(n):
@@ -109,6 +108,7 @@ def sieve(n):
 
     return prime_list
 
+
 def is_prime(n):
     if n <= 1:
         return False
@@ -119,23 +119,12 @@ def is_prime(n):
     # We check if it is even and not 2. If so then is it is definitely not
     # prime.
     if n % 2 == 0:
-        return False
-    
+        return False 
+
     # All prime factors of n are smaller than sqrt(n). Therefore if i is a
     # prime factor of n then i <= sqrt(n).
-    for i in range(2, ceil(sqrt(n))):
+    for i in range(2, int(ceil(sqrt(n)))):
         if n % i == 0:
             return False
 
     return True
-
-
-for i in range(1, 100):
-    if is_prime(i):
-        print(str(i))
-
-print(sieve(3))
-print(sieve(7))
-print(sieve(24))
-print(sieve(97))
-print(f_sieve(98))

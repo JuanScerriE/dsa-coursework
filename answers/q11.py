@@ -17,18 +17,3 @@ def sin(x):
 
 def cos(x):
     return sin(x + pi/2)
-
-
-print("Sine Test (In Radians)\n")
-
-print("sin(45) = " + str(sin(45)))
-print("sin(12) = " + str(sin(12)))
-print("sin(0.5) = " + str(sin(0.5)))
-print("sin(0) = " + str(sin(0)))
-
-print("\nCosine Test (In Radians)\n")
-
-print("cos(-13) = " + str(cos(-13)))
-print("cos(pi) = " + str(cos(math.pi)))
-print("cos(1.2345) = " + str(cos(1.2345)))
-print("cos(45) = " + str(cos(45)))

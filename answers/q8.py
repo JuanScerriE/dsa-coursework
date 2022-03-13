@@ -24,6 +24,7 @@ def newton_sqrt(n):
 
     return x
 
+
 # This is an interesting optimisation (increaseing the rate at which the
 # function converges).
 def halley_sqrt(n):
@@ -36,27 +37,3 @@ def halley_sqrt(n):
         x = x - (2*(x**2 - n)*(2*x)) / (8*(x**2) - 2*(x**2 - n))
 
     return x
-
-print("Newton's Method\n")
-
-print("sqrt(2) = " + str(newton_sqrt(2)))
-print("sqrt(3) = " + str(newton_sqrt(3)))
-print("sqrt(4) = " + str(newton_sqrt(4)))
-print("sqrt(5) = " + str(newton_sqrt(5)))
-print("sqrt(6) = " + str(newton_sqrt(6)))
-print("sqrt(7) = " + str(newton_sqrt(7)))
-print("sqrt(8) = " + str(newton_sqrt(8)))
-print("sqrt(9) = " + str(newton_sqrt(9)))
-print("sqrt(10) = " + str(newton_sqrt(10)))
-
-print("\nHalley's Method\n")
-
-print("sqrt(2) = " + str(halley_sqrt(2)))
-print("sqrt(3) = " + str(halley_sqrt(3)))
-print("sqrt(4) = " + str(halley_sqrt(4)))
-print("sqrt(5) = " + str(halley_sqrt(5)))
-print("sqrt(6) = " + str(halley_sqrt(6)))
-print("sqrt(7) = " + str(halley_sqrt(7)))
-print("sqrt(8) = " + str(halley_sqrt(8)))
-print("sqrt(9) = " + str(halley_sqrt(9)))
-print("sqrt(10) = " + str(halley_sqrt(10)))

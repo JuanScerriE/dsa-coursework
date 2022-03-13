@@ -38,5 +38,3 @@ def find_dups(list):
             dups.append(key)
 
     return dups
-
-print(find_dups([1,1,2,3,4,5,6,2,3,3,2,1,1,48,23]))

@@ -118,7 +118,7 @@ def lex(expr):
     return tok_list
 
 
-def eval(tok_list):
+def evaluate(tok_list):
     stack = Stack()
 
     for tok in tok_list:
@@ -148,9 +148,3 @@ def eval(tok_list):
         return stack.pop()
     else:
         raise Exception("InvalidExpression")
-
-
-
-expr = input("Input RPN Expression: ")
-
-print("Result: " + str(eval(lex(expr))))

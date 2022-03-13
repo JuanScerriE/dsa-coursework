@@ -14,31 +14,3 @@ def fib(n):
 
 def sum_fib(n):
     return fib(n + 2) - 1
-
-def sum_fib_iter(n):
-    sum = 0
-
-    for i in range(1, n + 1):
-        sum += fib(i)
-
-
-    return sum
-
-print("Fibonacci Sequence\n")
-
-# Fibonacci Sequence
-for i in range(1, 10):
-    print("n = " + str(i) + ": " + str(fib(i)))
-
-print("\nFibonacci Sum Iterative\n")
-
-# Fibonacci Sum Iterative O(n)
-for i in range(1, 10):
-    print("n = " + str(i) + ": " + str(sum_fib_iter(i)))
-
-
-print("\nFibonacci Sum O(1)\n")
-
-# Fibonacci Sum O(1)
-for i in range(1, 10):
-    print("n = " + str(i) + ": " + str(sum_fib(i)))

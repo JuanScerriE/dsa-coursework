@@ -1,8 +1,5 @@
 import math
 import random
-import sys
-
-sys.setrecursionlimit(5000)
 
 def swap(a, x, y):
     t = a[x]
@@ -37,6 +34,11 @@ def shellsort(a):
    
     return a
 
+
+# We are trying to find a random distribution of 7 elements,
+# sort it using something like shellsort and return the median
+# of that sorted list. The execution time of this is known
+# hence it has a time-complexity of O(1).
 def pivot(a, i, j):
     n = []
 
@@ -47,7 +49,8 @@ def pivot(a, i, j):
     
     return n[3]
 
-
+# The partitioning scheme being used is the Hoare partitioning
+# scheme. 
 def partition(a, i, j):
     p = pivot(a, i, j)
     i -= 1
@@ -65,19 +68,13 @@ def partition(a, i, j):
                 break
 
         if i >= j:
-            return j
+            return i
 
         swap(a, i, j)
 
+
 def quicksort(a, i, j):
-    if 0 <= i < j:
+    if 0 <= i and 0 <= j and i < j:
         p = partition(a, i, j)
-        quicksort(a, i, p)
-        quicksort(a, p + i, j)
-
-
-a = [23,3,5,4,656,3,5,56,53,4,5,656,75,334,23]
-
-quicksort(a, 0, len(a) - 1)
-
-print(a)
+        quicksort(a, i, p - 1)
+        quicksort(a, p, j)

@@ -18,6 +18,7 @@ def max(list):
 def half(list):
     return list[:len(list)//2], list[len(list)//2:]
 
+
 def max_2(list):
     if len(list) == 1:
         return list[0]
@@ -30,18 +31,3 @@ def max_2(list):
         l = max_2(list_l)
 
         return u if u > l else l
-
-
-print("`max` Implementation\n")
-
-print("max([13,14,1,3,7,5,21,59]) = " + str(max([13,14,1,3,7,5,21,59])))
-print("max([88,14,1,3,7,21,59]) = " + str(max([88,14,1,3,7,21,59])))
-print("max([13,-1214,1,3,7,5,21,59]) = " + str(max([13,-1214,1,3,7,5,21,59])))
-print("max([13,14,1,12,34,123,3,7,5,21,59]) = " + str(max([13,14,1,12,34,123,3,7,5,21,59])))
-
-print("\n`max_2` Implementation\n")
-
-print("max_2([13,14,1,3,7,5,21,59]) = " + str(max_2([13,14,1,3,7,5,21,59])))
-print("max_2([88,14,1,3,7,21,59]) = " + str(max_2([88,14,1,3,7,21,59])))
-print("max_2([13,-1214,1,3,7,5,21,59]) = " + str(max_2([13,-1214,1,3,7,5,21,59])))
-print("max_2([13,14,1,12,34,123,3,7,5,21,59]) = " + str(max_2([13,14,1,12,34,123,3,7,5,21,59])))

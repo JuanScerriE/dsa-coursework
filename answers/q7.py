@@ -56,21 +56,3 @@ class Node:
             else:
                 print(s[:(len(s) - 1)] + "/" + " " * len(str(self.value)) + "\\")
                 self.left.draw(s[:(len(s) - 1)] + "|" + " " * len(str(self.value)) + " |", Branch.Left)
-
-
-root = None
-
-while True:
-    x = input("Input integer (or anything else to quit): ")
-
-    try:
-        x = int(x)
-
-        if root == None:
-            root = Node(x)
-        else:
-            root.add(Node(x))
-    except:
-        break
-
-    root.draw("", Branch.Root)
