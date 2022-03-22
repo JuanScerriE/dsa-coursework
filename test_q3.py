@@ -2,6 +2,7 @@ import answers.q1 as q1
 import answers.q3 as q3
 import random
 
+
 print("Extremes Test\n")
 
 if [5, 3, 8, 7, 15] == q3.extremes([0, 5, 3, 6, 8, 7, 15, 9]):

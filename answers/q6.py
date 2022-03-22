@@ -1,57 +1,69 @@
-from math import sqrt
-from math import ceil
+import math
 
-# The idea: Basically, we are going to create an array whose size is given by
-# our input. in this case `limit`. The array will be filled with `True` or
-# `False`. `True` denotes that the index used to access that location in the
-# array is a prime. `False` denotes that the index used to access that location
-# in the array is not prime. The first two indicies 0 and 1 are not prime and
+
+# The idea: Basically, we are going to create an array whose
+# size is given by our input. In this case `limit`. The array
+# will be filled with `True` or `False`. `True` denotes that the
+# index used to access that location in the array is a prime.
+# `False` denotes that the index used to access that location is
+# not prime. The first two indices 0 and 1 are not prime and
 # they are set to `False`.
+#
+# Starting from index 2. If the value at index n is `True` then
+# mark every multiple of n (2n, 3n, 4n, ...) except n itself, as
+# `False` up till the limit Repeat the process for all other
+# indices.
+#
+# At the end you will have effectively struck out all the
+# indices which are not prime.
 
-# Starting from index 2. If the value at index n is `True` then mark every
-# multiple of n (2n, 3n, 4n, etc.) until the limit as `False`. Essentially,
-# striking them out. Repeat the process for all indicies.
-
-# At the end you will have effectively struck out all the indicies which are
-# not prime.
-
-# Optimisation 1: The initialisation pattern is usually all [False, False,
-# True, True, True, ...]. Instead we can start with [False, False, True, False,
-# True, False, True, False, ...]. This means that we are already discounting
-# half of the array. This is true because this pattern concides with the the
-# pattern of even and odd numbers. And as we know every even number which is
+# Optimisation 1: The initial pattern is usually [False, False,
+# True, True, True, ...]. Instead we can start with [False,
+# False, True, False, True, False, True, False, ...]. This means
+# that we are already discounting half of the array.
+#
+# This is valid because the pattern coincides with the pattern
+# of even and odd numbers. As we know every even number which is
 # not 2 is not prime.
 
-# Optimisation 2: We do not need to check every element until we reach the
-# limit. We can check uptill the square root of the limit to find all prime
-# numbers uptill the limit. This is possible because no the compositie numbers
-# smaller than our limit can have prime factors which are larger than their own
-# square root and since they are smaller than our limit then their square root
-# of is also smaller than the square root of the limit. Therefore all composite
-# numbers uptill the limit must have factors which are samller than the square
-# root of the limit.
+# Optimisation 2: We do not need to check every element until we
+# reach the limit. We only need check up till the square root of
+# the limit to find all prime numbers up till the limit.
+#
+# This is possible because composite numbers smaller than the
+# limit will have at least one prime factor which is smaller
+# than or equal to their own square root.
+#
+# Hence, all composite numbers smaller than the limit will have
+# at least one prime factor which is smaller than or equal to
+# the square root of the limit. (p <= q <=> sqrt(p) <= sqrt(q))
+#
+# Therefore all composite numbers up till the limit must have
+# factors which are smaller than or equal to the square root of
+# the limit.
 
-# Optimisation 3: We can start crossing out from the square of the index. This
-# is because anything smaller than the square of our index is either prime or
-# has a prime factor which is smaller than our index therefore it would have
-# already been dealt with. This again uses the same property that any integer
-# which is not prime has a prime factor which is samller than or equal to its
-# square root. And any element smaller than the square of our index
-# automatically implies that it is either prime or has a factor which is
-# smaller than our index.
+# Optimisation 3: We can start crossing out from the square of
+# the index (n^2) instead of the index (n).
+#
+# This is because anything smaller than the square of our index
+# is either prime or has at least one prime factor which is
+# smaller than our index (n - 1 = floor(sqrt(n^2 - 1)))
+# therefore it would have already been marked.
+#
+# Again this uses the same property as Optimisation 2.
 
 
 def f_sieve(limit):
-    # Optimistaion 1
+    # Optimisation 1
     N = [False, True] * ((limit + 1) // 2)
 
     N[1] = False
     N[2] = True
 
     # Optimisation 2
-    for n in range(3, int(ceil(sqrt(limit))), 2):
+    for n in range(3, int(math.ceil(math.sqrt(limit))), 2):
         if N[n]:
-            # Optimistaion 3
+            # Optimisation 3
             for m in range(n * n, limit, n):
                 N[m] = False
 
@@ -64,51 +76,6 @@ def f_sieve(limit):
     return P
 
 
-def sieve(n):
-    prime_list = [2]
-
-    if n <= 1:
-        return []
-
-    if n == 2:
-        return prime_list
-
-    # Finding all primes smaller than sqrt(n).
-
-    # Note: the upperbound will be ceil(sqrt(n)) since e.g. sqrt(24) ~ 4.89
-    # which means that we check 3 and 4 but the range function those not
-    # include the upperbound so we have to compensate by incrementing by one.
-    # Hence why ceil() is used.
-
-    for x in range(3, ceil(sqrt(n)), 2):
-        is_prime = True
-        # Checking if x is prime by checking against previous primes. If no
-        # previous prime divides x then x is prime.
-        for prime in prime_list:
-            if x % prime == 0:
-                is_prime = False
-                break
-
-        if is_prime:
-            prime_list.append(x)
-
-    count = len(prime_list)
-
-    # Finding the rest of the primes by sieving the integers which are
-    # divisible by the initial collection of primes.
-    for x in range(prime_list[0] + 1, n + 1):
-        is_prime = True
-        for i in range(count):
-            if x % prime_list[i] == 0:
-                is_prime = False
-                break
-
-        if is_prime:
-            prime_list.append(x)
-
-    return prime_list
-
-
 def is_prime(n):
     if n <= 1:
         return False
@@ -116,14 +83,14 @@ def is_prime(n):
     if n == 2:
         return True
 
-    # We check if it is even and not 2. If so then is it is definitely not
-    # prime.
+    # We check if it is even and not 2. If so then is it is
+    # definitely not prime.
     if n % 2 == 0:
         return False
 
-    # All prime factors of n are smaller than sqrt(n). Therefore if i is a
-    # prime factor of n then i <= sqrt(n).
-    for i in range(2, int(ceil(sqrt(n)))):
+    # There is at least one prime factor of n which is smaller
+    # than or equal to the sqrt(n).
+    for i in range(2, int(math.ceil(math.sqrt(n)))):
         if n % i == 0:
             return False
 

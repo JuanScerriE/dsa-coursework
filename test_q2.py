@@ -2,6 +2,7 @@ import answers.q1 as q1
 import answers.q2 as q2
 import random
 
+
 print("Merge Test")
 
 test1 = [0, 1, 1, 5, 3, 6, 8, 7, 9]
@@ -39,8 +40,8 @@ for i in range(len_a):
 for i in range(len_b):
     b.append(random.randint(0, 1024))
 
-print("Lenght of a: ", len_a)
-print("Lenght of b: ", len_b)
+print("Length of a: ", len_a)
+print("Length of b: ", len_b)
 
 print("\nUnsorted (Shellsort): ", a)
 q1.shellsort(a)
@@ -52,5 +53,5 @@ print("Sorted (Quicksort): ", b)
 
 c = q2.merge(a, b)
 
-print("\nLenght of c: ", len(c))
+print("\nLength of c: ", len(c))
 print("\nMerged: ", c)

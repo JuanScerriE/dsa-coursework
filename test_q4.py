@@ -23,8 +23,8 @@ if pass_test:
 else:
     print("Test Failed\n")
 
-# a = [random.randint(1, 1024) for k in range(64)]
-a = [1,1,2,3,4,6,12]
+a = [random.randint(1, 1024) for k in range(64)]
+# a = [1,2,4,6,12,24]
 
 related = q4.find_products(a)
 

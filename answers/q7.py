@@ -25,20 +25,15 @@ class Node:
             else:
                 self.left.add(node)
 
-    # I need to explain this algorithm otherwise I will forget what I am doing.
-    # So basically, I arrived at this algorithm by a process of convergence and
-    # experimentation I was not sure if I could do this But I realised that
-    # instead of for example passing the number of spaces for padding as a
-    # parameter to draw() we can just pass the string to pad with. This gives
-    # us a lot of control. Effectively, if we branch to the right we want to
-    # first draw the rest of the branch and then draw our element so the tree
-    # is balanced. The final character of our padding is `|` this allows us to
-    # create the connection. However, after two successive right draws the '|'
-    # must be removed and a new one should be added. The same goes for two
-    # successive lefts. If we have a right and left or a left and a right we
-    # keep the pipe where it is because that would be in the inner part of the
-    # tree. This is what the parent parameter is for. I think that is the gist.
-    # I should be able to remember it.
+    # The draw method is an infix traversal of the BST.
+    # Specifically, we first print the right sub-tree, then the
+    # root and then the left sub-tree.
+    #
+    # The draw method has two parameters, s and parent. s is the
+    # string which will be printed before the actual value is
+    # printed. parent is an enum which allows us to keep track
+    # of where our traverser is coming from. This allows us to
+    # modify the string s accordingly to draw a tree.
 
     def draw(self, s, parent):
         if self.right != None:
