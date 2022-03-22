@@ -26,18 +26,18 @@ len_a = random.randint(256, 300)
 
 len_b = 0
 
-# To make sure they are not of equal length
+# To make sure they are not of equal length.
 while True:
     len_b = random.randint(256, 300)
 
     if len_b != len_a:
         break
 
-# Populate a with random integers
+# Populate a with random integers.
 for i in range(len_a):
     a.append(random.randint(0, 1024))
 
-# Populate b with random integers
+# Populate b with random integers.
 for i in range(len_b):
     b.append(random.randint(0, 1024))
 

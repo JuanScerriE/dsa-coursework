@@ -40,10 +40,10 @@ def shellsort(a):
     return a
 
 
-# We are trying to find a random distribution of 7 elements,
-# sort it using something like shellsort and return the median
-# of that sorted list. The execution time of this is known
-# hence it has a time-complexity of O(1).
+# Collecting a random distribution of 7 elements, sorting them
+# using shellsort and returning the median of the sorted list.
+# The execution time is constant, hence it has a time-complexity
+# of O(1).
 def pivot(a, i, j):
     n = []
 

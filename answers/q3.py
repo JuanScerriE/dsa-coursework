@@ -1,7 +1,3 @@
-# Look on the document for further explanation as to why if there are not
-# extreme points the array is sorted.
-
-
 def extremes(a):
     sorted = True
     ret = []
