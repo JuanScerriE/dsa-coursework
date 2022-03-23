@@ -1,6 +1,3 @@
-import math
-
-
 # For this solution I am using a well-known method developed by
 # Netwon to find approximate solutions for the roots of
 # eqations. Specifically, I am finding an approximation for the
@@ -20,6 +17,10 @@ import math
 # sufficient number of times for all the values in the given
 # domain.
 
+
+import math
+
+
 # This function is the acutal answer.
 def newton_sqrt(n):
     if n < 0:
@@ -32,6 +33,8 @@ def newton_sqrt(n):
 
     return x
 
+
+# https://en.wikipedia.org/wiki/Halley's_method
 
 # This is an interesting optimisation (increaseing the rate at
 # which the function converges).

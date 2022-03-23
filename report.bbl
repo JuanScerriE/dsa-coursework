@@ -1,0 +1,149 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{frank60}{article}{}
+      \name{author}{2}{}{%
+        {{hash=b7965dbeb607b3ec223c675e2f2f9a35}{%
+           family={Frank},
+           familyi={F\bibinitperiod},
+           given={R.\bibnamedelimi M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=3ca498eb5433c9de16271140a711617e}{%
+           family={Lazarus},
+           familyi={L\bibinitperiod},
+           given={R.\bibnamedelimi B.},
+           giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{e7a97c0c854dceca6c3756acf124c000}
+      \strng{fullhash}{e7a97c0c854dceca6c3756acf124c000}
+      \strng{bibnamehash}{e7a97c0c854dceca6c3756acf124c000}
+      \strng{authorbibnamehash}{e7a97c0c854dceca6c3756acf124c000}
+      \strng{authornamehash}{e7a97c0c854dceca6c3756acf124c000}
+      \strng{authorfullhash}{e7a97c0c854dceca6c3756acf124c000}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0001-0782}
+      \field{journaltitle}{Commun. ACM}
+      \field{month}{01}
+      \field{number}{1}
+      \field{title}{A High-Speed Sorting Procedure}
+      \field{volume}{3}
+      \field{year}{1960}
+      \field{pages}{20\bibrangedash 22}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1145/366947.366957
+      \endverb
+      \verb{eprint}
+      \verb https://dl.acm.org/doi/pdf/10.1145/366947.366957
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/366947.366957
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/366947.366957
+      \endverb
+    \endentry
+    \entry{hoare62}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d6facc8397f631d3ef01dd70be993640}{%
+           family={Hoare},
+           familyi={H\bibinitperiod},
+           given={C.\bibnamedelimi A.\bibnamedelimi R.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{d6facc8397f631d3ef01dd70be993640}
+      \strng{fullhash}{d6facc8397f631d3ef01dd70be993640}
+      \strng{bibnamehash}{d6facc8397f631d3ef01dd70be993640}
+      \strng{authorbibnamehash}{d6facc8397f631d3ef01dd70be993640}
+      \strng{authornamehash}{d6facc8397f631d3ef01dd70be993640}
+      \strng{authorfullhash}{d6facc8397f631d3ef01dd70be993640}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0010-4620}
+      \field{journaltitle}{The Computer Journal}
+      \field{month}{01}
+      \field{number}{1}
+      \field{title}{Quicksort}
+      \field{volume}{5}
+      \field{year}{1962}
+      \field{pages}{10\bibrangedash 16}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1093/comjnl/5.1.10
+      \endverb
+      \verb{eprint}
+      \verb https://academic.oup.com/comjnl/article-pdf/5/1/10/1111445/050010.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/comjnl/5.1.10
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/comjnl/5.1.10
+      \endverb
+    \endentry
+    \entry{sorenson90}{report}{}
+      \name{author}{1}{}{%
+        {{hash=54815b75441763c657f1ec96f9b7e4ad}{%
+           family={Sorenson},
+           familyi={S\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Department of Computer Sciences, University of Wisconsin-Madison}%
+      }
+      \list{location}{1}{%
+        {Madison, WI 53706}%
+      }
+      \strng{namehash}{54815b75441763c657f1ec96f9b7e4ad}
+      \strng{fullhash}{54815b75441763c657f1ec96f9b7e4ad}
+      \strng{bibnamehash}{54815b75441763c657f1ec96f9b7e4ad}
+      \strng{authorbibnamehash}{54815b75441763c657f1ec96f9b7e4ad}
+      \strng{authornamehash}{54815b75441763c657f1ec96f9b7e4ad}
+      \strng{authorfullhash}{54815b75441763c657f1ec96f9b7e4ad}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{01}
+      \field{number}{909}
+      \field{title}{An Introduction to Prime Number Sieves}
+      \field{type}{techreport}
+      \field{year}{1990}
+      \verb{eprint}
+      \verb https://research.cs.wisc.edu/techreports/1990/TR909.pdf
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

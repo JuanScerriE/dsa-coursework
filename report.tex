@@ -6,12 +6,12 @@
 % \usepackage{pgfornament}
 % \usepackage{fancyvrb}
 \usepackage[
-top	= 2.50cm,
-bottom = 2.50cm,
-left = 2cm,
-right = 2cm,
-marginparsep = 0pt,
-marginparwidth =0pt]{geometry}
+top=2.50cm,
+bottom=2.50cm,
+left=2cm,
+right=2cm,
+marginparsep=0pt,
+marginparwidth=0pt]{geometry}
 \usepackage{fancyhdr}
 \usepackage{float}
 \usepackage{cancel}
@@ -34,6 +34,7 @@ marginparwidth =0pt]{geometry}
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{tocloft}
+\usepackage[backend=biber]{biblatex}
 
 % MACROS & DEFS
 
@@ -58,6 +59,9 @@ marginparwidth =0pt]{geometry}
 
 % \usetikzlibrary{calc, arrows, positioning, circuits.logic.US}
 \graphicspath{ {./images/} }
+
+% Biblography
+\addbibresource{dsa.bib}
 
 \lstdefinestyle{code}{
 	basicstyle=\ttfamily\small,
@@ -230,6 +234,10 @@ files and can be seen in the dump screen for each question.
 
 \section{\textit{Question 1:} Shellsort \& Quicksort}
 
+The gap sequence used in the Shellsort algorithm was proposed by
+\textcite{frank60}, and the partition scheme used in the
+Quicksort algorithm was proposed by \textcite{hoare62}.
+
 \lstinputlisting[caption={Answer to \textit{Question
 1}},language=Python]{answers/q1.py}
 
@@ -251,15 +259,6 @@ files and can be seen in the dump screen for each question.
 2}}]{dumps/dump_q2.txt}
 
 \section{\textit{Question 3:} Finding Extremes}
-
-\lstinputlisting[caption={Answer to \textit{Question
-3}},language=Python]{answers/q3.py}
-
-\lstinputlisting[caption={Test for \textit{Question 3}
-},language=Python]{test_q3.py}
-
-\lstinputlisting[caption={Screen dump for \textit{Question
-3}}]{dumps/dump_q3.txt}
 
 To show that if an array does not have extremes then it must be
 stored we need to define what it means for an array to be sorted
@@ -326,6 +325,15 @@ Therefore, an array has \textbf{extremes} if and only if it is
 \ul{not} \textbf{sorted}. Hence, if an array does \ul{not} have
 \textbf{extremes} then it must be \textbf{sorted}.
 
+\lstinputlisting[caption={Answer to \textit{Question
+3}},language=Python]{answers/q3.py}
+
+\lstinputlisting[caption={Test for \textit{Question 3}
+},language=Python]{test_q3.py}
+
+\lstinputlisting[caption={Screen dump for \textit{Question
+3}}]{dumps/dump_q3.txt}
+
 \section{\textit{Question 4:} Finding Product Relations}
 
 \lstinputlisting[caption={Answer to \textit{Question
@@ -349,6 +357,10 @@ Therefore, an array has \textbf{extremes} if and only if it is
 5}}]{dumps/dump_q5.txt}
 
 \section{\textit{Question 6:} Finding Primes}
+
+The algorithm used for the sieve was inspired by
+\textcite{sorenson90}. For the optimisation read the comments in
+the code.
 
 \lstinputlisting[caption={Answer to \textit{Question
 6}},language=Python]{answers/q6.py}
@@ -424,5 +436,7 @@ Therefore, an array has \textbf{extremes} if and only if it is
 
 \lstinputlisting[caption={Screen dump for \textit{Question
 12}}]{dumps/dump_q12.txt}
+
+\printbibliography
 
 \end{document}

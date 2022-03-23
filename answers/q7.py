@@ -25,7 +25,7 @@ class Node:
             else:
                 self.left.add(node)
 
-    # The draw method is an infix traversal of the BST.
+    # The draw method is an inorder traversal of the BST.
     # Specifically, we first print the right sub-tree, then the
     # root and then the left sub-tree.
     #

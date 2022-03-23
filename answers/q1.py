@@ -9,7 +9,7 @@ def swap(a, x, y):
 
 
 # General term of the gap sequence.
-# Proposed by Frank & Lazarus, 1960.
+# Proposed by Frank & Lazarus.
 def next_h(h):
     return 2 * int(math.floor(h / 4)) + 1
 

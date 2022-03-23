@@ -1,11 +1,14 @@
 # I am using the closed-form expression for the Fibonacci
 # Sequence to get the exact value at index n without having to
-# compute all the previous elements of the sequence.
+# compute all the previous elements of the sequence. Albeit, I
+# am using rounding which is a slight optimisation.
 
-# Moreover, I am using the close-form expression for the sum of
+# Moreover, I am using the closed-form expression for the sum of
 # the elements in the sequence to get the exact sum at index n
 # without having to add all previous elements. This makes the
-# algorithms time-complexity O(1).
+# algorithm's time-complexity O(1).
+
+# https://en.wikipedia.org/wiki/Fibonacci_number
 
 import math
 
