@@ -11,6 +11,8 @@ def extremes(a):
             ret.append(a[i])
 
     if sorted:
+        # See explanation as to why this is the case in the
+        # report.
         print("SORTED")
     else:
         print()

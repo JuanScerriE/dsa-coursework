@@ -1,6 +1,7 @@
 import answers.q8 as q8
 
-print("\nNewton Tests\n")
+
+print("Newton Tests\n")
 
 if 1.4142 == round(q8.newton_sqrt(2), 4):
     print("Test Passed")

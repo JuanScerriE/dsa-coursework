@@ -85,7 +85,8 @@ def get_num(peek_expr):
 
     floating = False
 
-    while "0" <= peek_expr.peek() <= "9" or peek_expr.peek() == ".":
+    while peek_expr.peek() != None and ("0" <= peek_expr.peek() <=
+            "9" or peek_expr.peek() == "."):
         if peek_expr.peek() == ".":
             if not floating:
                 floating = True

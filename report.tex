@@ -125,6 +125,8 @@ B.Sc. (Hons)(Melit.) Computing Science and Mathematics (First Year)}
 
 \lstlistoflistings
 
+\clearpage
+
 \section{Plagiarism Declaration}
 
 Plagiarism is defined as \textit{``the unacknowledged use, as
@@ -206,6 +208,26 @@ tested and confirmed to work well (see list below).
 
 Juan Scerri
 
+\section{Language \& Testing Methodology}
+
+The programming language which I decided to choose to do this
+assignment is Python 3. The main reason for chosing Python 3 was
+the speed of development.
+
+Each algorithm was tested using a separarte file, in general
+named \texttt{test\_q(n).py}, where \texttt{n} refers to the
+question number. Each file contains the expected results of the
+algorithms. Each file compares the expected results with the
+results of the algorithm. If the results match ``\texttt{Test
+Passed}'' will be printed otherwise ``\texttt{Test Failed}''
+will be printed. 
+
+Moreover, some usage of the algorithms was implemented in the
+test files. For example \textit{Question 1} required that we
+sort two arrays which have at least 256 elements and have a
+different length. Such functionality was implemented in the test
+files and can be seen in the dump screen for each question.
+
 \section{\textit{Question 1:} Shellsort \& Quicksort}
 
 \lstinputlisting[caption={Answer to \textit{Question
@@ -214,9 +236,8 @@ Juan Scerri
 \lstinputlisting[caption={Test for \textit{Question 1}
 },language=Python]{test_q1.py}
 
-\begin{lstlisting}[caption={Screen dump for \textit{Question
-1}}]
-\end{lstlisting}
+\lstinputlisting[caption={Screen dump for \textit{Question
+1}}]{dumps/dump_q1.txt}
 
 \section{\textit{Question 2:} Merging Sorted Arrays}
 
@@ -226,9 +247,8 @@ Juan Scerri
 \lstinputlisting[caption={Test for \textit{Question 2}
 },language=Python]{test_q2.py}
 
-\begin{lstlisting}[caption={Screen dump for \textit{Question
-2}}]
-\end{lstlisting}
+\lstinputlisting[caption={Screen dump for \textit{Question
+2}}]{dumps/dump_q2.txt}
 
 \section{\textit{Question 3:} Finding Extremes}
 
@@ -238,9 +258,8 @@ Juan Scerri
 \lstinputlisting[caption={Test for \textit{Question 3}
 },language=Python]{test_q3.py}
 
-\begin{lstlisting}[caption={Screen dump for \textit{Question
-3}}]
-\end{lstlisting}
+\lstinputlisting[caption={Screen dump for \textit{Question
+3}}]{dumps/dump_q3.txt}
 
 To show that if an array does not have extremes then it must be
 stored we need to define what it means for an array to be sorted
@@ -315,9 +334,8 @@ Therefore, an array has \textbf{extremes} if and only if it is
 \lstinputlisting[caption={Test for \textit{Question 4}
 },language=Python]{test_q4.py}
 
-\begin{lstlisting}[caption={Screen dump for \textit{Question
-4}},language=Python]
-\end{lstlisting}
+\lstinputlisting[caption={Screen dump for \textit{Question
+4}}]{dumps/dump_q4.txt}
 
 \section{\textit{Question 5:} \texttt{RPN} Calculator}
 
@@ -327,9 +345,8 @@ Therefore, an array has \textbf{extremes} if and only if it is
 \lstinputlisting[caption={Test for \textit{Question 5}
 },language=Python]{test_q5.py}
 
-\begin{lstlisting}[caption={Screen dump for \textit{Question
-5}},language=Python]
-\end{lstlisting}
+\lstinputlisting[caption={Screen dump for \textit{Question
+5}}]{dumps/dump_q5.txt}
 
 \section{\textit{Question 6:} Finding Primes}
 
@@ -339,9 +356,8 @@ Therefore, an array has \textbf{extremes} if and only if it is
 \lstinputlisting[caption={Test for \textit{Question 6}
 },language=Python]{test_q6.py}
 
-\begin{lstlisting}[caption={Screen dump for \textit{Question
-6}},language=Python]
-\end{lstlisting}
+\lstinputlisting[caption={Screen dump for \textit{Question
+6}}]{dumps/dump_q6.txt}
 
 \section{\textit{Question 7:} Building a Binary Search Tree}
 
@@ -351,10 +367,8 @@ Therefore, an array has \textbf{extremes} if and only if it is
 \lstinputlisting[caption={Test for \textit{Question 7}
 },language=Python]{test_q7.py}
 
-
-\begin{lstlisting}[caption={Screen dump for \textit{Question
-7}},language=Python]
-\end{lstlisting}
+\lstinputlisting[caption={Screen dump for \textit{Question
+7}}]{dumps/dump_q7.txt}
 
 \section{\textit{Question 8:} Square Root Approximation}
 
@@ -364,10 +378,8 @@ Therefore, an array has \textbf{extremes} if and only if it is
 \lstinputlisting[caption={Test for \textit{Question 8}
 },language=Python]{test_q8.py}
 
-\begin{lstlisting}[caption={Screen dump for \textit{Question
-8}},language=Python]
-\end{lstlisting}
-
+\lstinputlisting[caption={Screen dump for \textit{Question
+8}}]{dumps/dump_q8.txt}
 
 \section{\textit{Question 9:} Finding Duplicates}
 
@@ -377,9 +389,8 @@ Therefore, an array has \textbf{extremes} if and only if it is
 \lstinputlisting[caption={Test for \textit{Question 9}
 },language=Python]{test_q9.py}
 
-\begin{lstlisting}[caption={Screen dump for \textit{Question
-9}},language=Python]
-\end{lstlisting}
+\lstinputlisting[caption={Screen dump for \textit{Question
+9}}]{dumps/dump_q9.txt}
 
 \section{\textit{Question 10:} Recursive \texttt{max()}}
 
@@ -389,9 +400,8 @@ Therefore, an array has \textbf{extremes} if and only if it is
 \lstinputlisting[caption={Test for \textit{Question 10}
 },language=Python]{test_q10.py}
 
-\begin{lstlisting}[caption={Screen dump for \textit{Question
-10}},language=Python]
-\end{lstlisting}
+\lstinputlisting[caption={Screen dump for \textit{Question
+10}}]{dumps/dump_q10.txt}
 
 \section{\textit{Question 11:} Cosine/Sine Approximation}
 
@@ -401,9 +411,8 @@ Therefore, an array has \textbf{extremes} if and only if it is
 \lstinputlisting[caption={Test for \textit{Question 11}
 },language=Python]{test_q11.py}
 
-\begin{lstlisting}[caption={Screen dump for \textit{Question
-11}},language=Python]
-\end{lstlisting}
+\lstinputlisting[caption={Screen dump for \textit{Question
+11}}]{dumps/dump_q11.txt}
 
 \section{\textit{Question 12:} Fibonacci Sums}
 
@@ -413,8 +422,7 @@ Therefore, an array has \textbf{extremes} if and only if it is
 \lstinputlisting[caption={Test for \textit{Question 12}
 },language=Python]{test_q12.py}
 
-\begin{lstlisting}[caption={Screen dump for \textit{Question
-12}},language=Python]
-\end{lstlisting}
+\lstinputlisting[caption={Screen dump for \textit{Question
+12}}]{dumps/dump_q12.txt}
 
 \end{document}

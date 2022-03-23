@@ -2,6 +2,8 @@ import answers.q4 as q4
 import random
 
 
+print("Finding Products Test")
+
 test_related = q4.find_products([1, 5, 3, 6, 8, 7, 15, 9])
 
 expected_related = [

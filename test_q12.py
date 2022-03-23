@@ -1,5 +1,6 @@
 import answers.q12 as q12
 
+
 print("Fibonacci Test")
 
 if [1, 2, 4, 7, 12, 20, 33, 54, 88] == [q12.sum_fib(k) for k in range(1, 10)]:

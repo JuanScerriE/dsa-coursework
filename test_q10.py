@@ -1,6 +1,6 @@
 import answers.q10 as q10
 
-print("\n`max` Tests\n")
+print("`max` Tests\n")
 
 if [88] == q10.max([88, 14, 1, 3, 7, 21, 59]):
     print("Test Passed")

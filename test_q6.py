@@ -39,6 +39,8 @@ known_primes = [
     149,
 ]
 
+print("Primality Tests")
+
 if q6.is_prime(known_primes[5]) == True:
     print("Test Passed")
 else:
@@ -53,6 +55,9 @@ if q6.is_prime(known_primes[23]) == True:
     print("Test Passed")
 else:
     print("Test Failed")
+
+
+print("\nSieve Test")
 
 generated_primes = q6.f_sieve(150)
 

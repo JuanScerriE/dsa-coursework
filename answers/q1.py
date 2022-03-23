@@ -10,14 +10,13 @@ def swap(a, x, y):
 
 # General term of the gap sequence.
 # Proposed by Frank & Lazarus, 1960.
-def next_h(n, m):
-    return 2 * int(math.floor(n / 2 ** (m + 1))) + 1
+def next_h(h):
+    return 2 * int(math.floor(h / 4)) + 1
 
 
 def shellsort(a):
     n = len(a)
-    m = 1
-    h = next_h(n, m)
+    h = next_h(n)
 
     while h >= 1:
         for i in range(h):
@@ -30,12 +29,10 @@ def shellsort(a):
                     else:
                         break
 
-        m += 1
-
         if h == 1:
             break
 
-        h = next_h(n, m)
+        h = next_h(h)
 
     return a
 

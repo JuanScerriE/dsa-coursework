@@ -1,6 +1,7 @@
 import answers.q11 as q11
 import math
 
+
 print("`sin` Tests\n")
 
 if 0.9986 == round(q11.sin(45.5), 4):
@@ -25,7 +26,6 @@ if 0.8439 == round(q11.cos(12), 4):
     print("Test Passed")
 else:
     print("Test Failed")
-
 
 print("\nSine Output (In Radians)\n")
 

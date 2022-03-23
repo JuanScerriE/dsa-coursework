@@ -1,5 +1,8 @@
 import answers.q9 as q9
 
+
+print("Finding Duplicates Tests")
+
 if [1, 2, 3] == q9.find_dups([1, 1, 2, 3, 4, 5, 6, 2, 3, 3, 2, 1, 1, 48, 23]):
     print("Test Passed")
 else:

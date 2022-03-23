@@ -1,11 +1,10 @@
-# This is a very compact recursive algorithm for finding the maximum inspired
-# by merge sort. The first implementation `max` returns a singleton with
-# the largest element of the provided list. However, it has
-# three recursive calls instead of 2.
+# This is a very compact recursive algorithm for finding the
+# maximum inspired by merge sort. The first implementation `max`
+# returns a singleton with the largest element of the provided
+# list. However, it has three recursive calls instead of two.
 
-# `max_2` is similar to `max` if just eliminates the need for the third
-# recursive call.
-
+# `max_2` is similar to `max` it however eliminates the need for
+# the third recursive call.
 
 def max(list):
     if len(list) == 1:
