@@ -2350,6 +2350,8 @@
     <bcf:citekey order="4">hoare62</bcf:citekey>
     <bcf:citekey order="5">sorenson90</bcf:citekey>
     <bcf:citekey order="6">sorenson90</bcf:citekey>
+    <bcf:citekey order="7">wikifib</bcf:citekey>
+    <bcf:citekey order="8">wolframfib</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

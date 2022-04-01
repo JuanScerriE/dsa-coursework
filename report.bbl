@@ -19,6 +19,25 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{wikifib}{online}{}
+      \list{organization}{1}{%
+        {Wikipedia}%
+      }
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labeltitlesource}{title}
+      \field{title}{Fibonacci Numbers}
+      \field{urlday}{1}
+      \field{urlmonth}{4}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Fibonacci_number
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Fibonacci_number
+      \endverb
+    \endentry
     \entry{frank60}{article}{}
       \name{author}{2}{}{%
         {{hash=b7965dbeb607b3ec223c675e2f2f9a35}{%
@@ -141,6 +160,39 @@
       \field{year}{1990}
       \verb{eprint}
       \verb https://research.cs.wisc.edu/techreports/1990/TR909.pdf
+      \endverb
+    \endentry
+    \entry{wolframfib}{online}{}
+      \name{author}{1}{}{%
+        {{hash=be61233a92f4ecee0f9e6794cb4e856e}{%
+           family={Weisstein},
+           familyi={W\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {From MathWorld -- A Wolfram Web Resource}%
+      }
+      \strng{namehash}{be61233a92f4ecee0f9e6794cb4e856e}
+      \strng{fullhash}{be61233a92f4ecee0f9e6794cb4e856e}
+      \strng{bibnamehash}{be61233a92f4ecee0f9e6794cb4e856e}
+      \strng{authorbibnamehash}{be61233a92f4ecee0f9e6794cb4e856e}
+      \strng{authornamehash}{be61233a92f4ecee0f9e6794cb4e856e}
+      \strng{authorfullhash}{be61233a92f4ecee0f9e6794cb4e856e}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Binet's Fibonacci Number Formula}
+      \field{urlday}{1}
+      \field{urlmonth}{4}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://mathworld.wolfram.com/BinetsFibonacciNumberFormula.html
+      \endverb
+      \verb{url}
+      \verb https://mathworld.wolfram.com/BinetsFibonacciNumberFormula.html
       \endverb
     \endentry
   \enddatalist

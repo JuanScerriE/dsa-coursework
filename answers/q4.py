@@ -66,8 +66,8 @@ def find_products(a):
     # need. Specifically, It allows us to generate triples
     # where, the last element is the product of the first two.
     # Moreover, we generate unique products. This takes into
-    # account the commutativity of multiplications so we do not
-    # have doubles. Moreover, the time complexity of this is
+    # account the commutativity of multiplication so we do not
+    # have doubles. Moreover, the time-complexity of this is
     # O(n(n-1)/2). This is the exact amount of iterations. We
     # keep track of the previous elements to make sure that we
     # do not repeat elements. Both in the outer loop and the
@@ -88,7 +88,8 @@ def find_products(a):
     related = []
 
     # A simliar approach is used here. This allows us to yield
-    # completely different elements without explicity checking.
+    # completely different elements without explicity checking
+    # the individual components of the products.
     for i in range(len(products) - 1):
         for j in range(i + 1, len(products)):
             if products[i].product_equals(products[j]):

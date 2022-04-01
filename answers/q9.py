@@ -9,20 +9,24 @@
 # will increase the count otherwise it will add the new element
 # to the dictionary. This means that we are looping over the
 # list once to count how many times each unique element occurs.
-
+#
 # We are creating a dictionary whose worst case space-complexity
-# is O(n). Moreover, the average case time-complexity is of the
+# is O(n). Moreover, the average case time-complexity of the
 # dictionary is O(1).
 #
 # This means that our algorithm has an average time-complexity
-# of O(2n) since we are looping over each element twice. Once to
-# index them in the dictionary and the other time to check which
-# ones have duplicates. 
+# of O(2n) ( = O(n) ) since we are looping over each element
+# twice. Once to index them in the dictionary and the other time
+# to check which ones have duplicates. 
 # 
 # Moreover, the space-complexity of our algorithm is also O(2n)
 # since we are creating a second array to hold all the values
-# which had duplicates apart from the space-complexity of the
-# dictionary.
+# which have duplicates, in addition to the space-complexity of
+# the dictionary.
+#
+# Note: This is only discussing the average case
+# time-complexity. If we are very unlucky the worst case
+# time-complexity is O(n^2).
 
 def find_dups(list):
     dict = {}

@@ -1,3 +1,7 @@
+# The PeekStream class is a class which allows us to easily
+# traverse a string. Even between function calls since the
+# object is allocated on the heap and a pointer is passed.
+
 class PeekStream:
     def __init__(self, stream):
         self.stream = stream
@@ -31,6 +35,9 @@ class PeekStream:
             return None
 
 
+# The Token class is defining unit of data which our program
+# can easily manipulate.
+
 class Token:
     def __init__(self, typ, val):
         self.typ = typ
@@ -51,6 +58,8 @@ class Token:
     def get_val(self):
         return self.val
 
+# The Stack class is at best a wrapper around Python arrays to
+# make them behave more like a stack.
 
 class Stack:
     def __init__(self):
@@ -71,6 +80,8 @@ class Stack:
     def get_len(self):
         return self.len
 
+    # This method is convient because it allows us to print
+    # the stack.
     def out(self):
         print("Base [", end="")
 
@@ -80,6 +91,9 @@ class Stack:
         print(str(self.arr[self.len - 1]) + "] Top")
 
 
+# This function continues reading from the string until it
+# reaches a character which is not a symbol used by floats in
+# base 10.
 def get_num(peek_expr):
     val = ""
 
@@ -98,10 +112,13 @@ def get_num(peek_expr):
     return Token("NUM", float(val))
 
 
+# Operators are always of length one.
 def get_opr(peek_expr):
     return Token("OPR", peek_expr.next())
 
 
+# This is where our character stream is converted into a list of
+# tokens which can be evaluated.
 def lex(expr):
     peek_expr = PeekStream(expr)
 
@@ -119,7 +136,8 @@ def lex(expr):
 
     return tok_list
 
-
+# The evaluate function expects a RPN statement which can then
+# be evaluated. 
 def evaluate(tok_list):
     stack = Stack()
 
@@ -130,6 +148,9 @@ def evaluate(tok_list):
             opr = tok.get_val()
             a = stack.pop()
             b = stack.pop()
+
+            if a == None or b == None:
+                raise Exception("InvalidExpression")
 
             if opr == "+":
                 stack.push(a + b)

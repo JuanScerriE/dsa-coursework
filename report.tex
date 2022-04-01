@@ -35,8 +35,15 @@ marginparwidth=0pt]{geometry}
 \usepackage{xcolor}
 \usepackage{tocloft}
 \usepackage[backend=biber]{biblatex}
+\usepackage{tikz}
 
 % MACROS & DEFS
+
+
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\round}[1]{\left\lfloor #1 \right\rceil}
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
 
 \DeclareRobustCommand{\ul}[1]{%
 	\uline{\phantom{#1}}%
@@ -228,9 +235,9 @@ will be printed.
 
 Moreover, some usage of the algorithms was implemented in the
 test files. For example \textit{Question 1} required that we
-sort two arrays which have at least 256 elements and have a
-different length. Such functionality was implemented in the test
-files and can be seen in the dump screen for each question.
+sort two arrays which have at least 256 elements and are of
+different lengths. Such functionality was implemented in the
+test files and can be seen in the dump screen for each question.
 
 \section{\textit{Question 1:} Shellsort \& Quicksort}
 
@@ -336,6 +343,8 @@ Therefore, an array has \textbf{extremes} if and only if it is
 
 \section{\textit{Question 4:} Finding Product Relations}
 
+For an explanation read the comments.
+
 \lstinputlisting[caption={Answer to \textit{Question
 4}},language=Python]{answers/q4.py}
 
@@ -346,6 +355,8 @@ Therefore, an array has \textbf{extremes} if and only if it is
 4}}]{dumps/dump_q4.txt}
 
 \section{\textit{Question 5:} \texttt{RPN} Calculator}
+
+For an explanation read the comments.
 
 \lstinputlisting[caption={Answer to \textit{Question
 5}},language=Python]{answers/q5.py}
@@ -359,8 +370,8 @@ Therefore, an array has \textbf{extremes} if and only if it is
 \section{\textit{Question 6:} Finding Primes}
 
 The algorithm used for the sieve was inspired by
-\textcite{sorenson90}. For the optimisation read the comments in
-the code.
+\textcite{sorenson90}. For the optimisations read the comments
+in the code.
 
 \lstinputlisting[caption={Answer to \textit{Question
 6}},language=Python]{answers/q6.py}
@@ -373,6 +384,8 @@ the code.
 
 \section{\textit{Question 7:} Building a Binary Search Tree}
 
+For an explanation read the comments.
+
 \lstinputlisting[caption={Answer to \textit{Question
 7}},language=Python]{answers/q7.py}
 
@@ -383,6 +396,8 @@ the code.
 7}}]{dumps/dump_q7.txt}
 
 \section{\textit{Question 8:} Square Root Approximation}
+
+For an explanation read the comments.
 
 \lstinputlisting[caption={Answer to \textit{Question
 8}},language=Python]{answers/q8.py}
@@ -395,6 +410,8 @@ the code.
 
 \section{\textit{Question 9:} Finding Duplicates}
 
+For an explanation read the comments.
+
 \lstinputlisting[caption={Answer to \textit{Question
 9}},language=Python]{answers/q9.py}
 
@@ -405,6 +422,8 @@ the code.
 9}}]{dumps/dump_q9.txt}
 
 \section{\textit{Question 10:} Recursive \texttt{max()}}
+
+For an explanation read the comments.
 
 \lstinputlisting[caption={Answer to \textit{Question
 10}},language=Python]{answers/q10.py}
@@ -417,6 +436,8 @@ the code.
 
 \section{\textit{Question 11:} Cosine/Sine Approximation}
 
+For an explanation read the comments.
+
 \lstinputlisting[caption={Answer to \textit{Question
 11}},language=Python]{answers/q11.py}
 
@@ -427,6 +448,117 @@ the code.
 11}}]{dumps/dump_q11.txt}
 
 \section{\textit{Question 12:} Fibonacci Sums}
+
+To find Fibonacci sums very quickly we can use the two results
+listed below \cite{wikifib}.
+
+\begin{align}
+  F_n = \round{\frac{\phi^n}{\sqrt{5}}}, \quad \phi = \frac{1 +
+  \sqrt{5}}{2}. \label{fib_num}
+\end{align}
+
+\begin{align}
+  \sum_{i=1}^{n} F_i = F_{n+2} - 1. \label{fib_sum}
+\end{align}
+
+The original equation for the Fibonacci numbers is a recurrence
+relation defined as
+
+\begin{align}
+  F_n = F_{n-1} + F_{n-2}, \qquad F_1 = F_2 = 1. \label{fib_def}
+\end{align}
+
+However, there exists a closed-form expression called Binet's
+Formula \cite{wolframfib} and it is
+
+\begin{align*}
+  F_n = \frac{\phi^n - (-\phi)^n}{\sqrt{5}}.
+\end{align*}
+
+One notices that,
+
+\begin{align*}
+  \forall \, n \in \mathbb{N} : \abs{\frac{(-\phi)^n}{\sqrt{5}}}
+  < \frac{1}{2},
+\end{align*}
+
+which implies
+
+\begin{align*}
+  \forall \, n \in \mathbb{N} : \abs{F_n -
+  \frac{\phi^n}{\sqrt{5}}} < \frac{1}{2}.
+\end{align*}
+
+Visually, this can be represented as follows.
+
+\begin{center}
+  \begin{tikzpicture}
+    \draw [thick] (-4, 0) -- (4, 0);
+    \draw [thick] (0, -0.2) -- (0, 0.2);
+
+    % Brackets
+    \node at (-1.5, 0) {$($};
+    \node at (1.5, 0) {$)$};
+
+    % Bottom labels
+    \node [below] at (0, -0.25) {$F_n$};
+    \node [below] at (-1.5, -0.25) {$F_n - \frac{1}{2}$};
+    \node [below] at (1.5, -0.25) {$F_n + \frac{1}{2}$};
+
+    % Indicator of our value
+    \draw [thick, ->] (-1, 0.5) -- (-1, 0);
+
+    % Our value
+    \node [above] at (-1, 0.5) {$\frac{\phi^n}{\sqrt{5}}$};
+  \end{tikzpicture}
+\end{center}
+
+This allows to conclude that $\frac{\phi^n}{\sqrt{5}}$ is always
+within rounding error of the actual Fibonacci number. Hence, by
+rounding $\frac{\phi^n}{\sqrt{5}}$ we get the $n$-th Fibonacci
+number.
+
+This completes our derivation for \ref{fib_num}.
+
+\vspace{1em}
+
+We can prove \ref{fib_sum} by using an inductive argument.
+
+\vspace{1em}
+
+\textit{Argument.}
+
+Base case ($n = 1$): 
+
+$$LHS = \sum_{i = 1}^{1} F_i = F_1 = 1$$ 
+$$RHS = F_{1 + 2} - 1 = F_3 - 1 = F_2 + F_1 - 1 = 1 + 1 - 1 =
+1$$
+
+Hence, the base case holds since $LHS = RHS$.
+
+\vspace{1em}
+
+Inductive case ($n = k$):
+
+Suppose that sum holds for $n = k - 1$. 
+
+\begin{align}
+  \sum_{i = 1}^{k - 1} F_i = F_{k - 1 + 2} - 1 = F_{k + 1} - 1
+  \label{ind_hyp}
+\end{align}
+
+We are required to show that the sum holds for $n = k$.
+
+\begin{align*}
+  \sum_{i = 1}^{k} F_i & = F_{k} + \sum_{i = 1}^{k - 1} F_i\\
+                       % & \qquad (By\ \ref{ind_hyp})\\
+                       & = F_{k + 1} + F_{k} - 1\\
+                       % & \qquad (By\ \ref{fib_def})\\
+                       & = F_{k + 2} - 1 
+\end{align*}
+
+Therefore, by induction, \ref{fib_sum} holds for all natural
+numbers.
 
 \lstinputlisting[caption={Answer to \textit{Question
 12}},language=Python]{answers/q12.py}

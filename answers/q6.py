@@ -11,7 +11,7 @@ import math
 #
 # Starting from index 2. If the value at index n is `True` then
 # mark every multiple of n (2n, 3n, 4n, ...) except n itself, as
-# `False` up till the limit Repeat the process for all other
+# `False` up till the limit. Repeat the process for all other
 # indices.
 #
 # At the end you will have effectively struck out all the
@@ -47,8 +47,10 @@ import math
 #
 # This is because anything smaller than the square of our index
 # is either prime or has at least one prime factor which is
-# smaller than our index (n - 1 = floor(sqrt(n^2 - 1)))
-# therefore it would have already been marked.
+# smaller than our index (n - 1 = floor(sqrt(n^2 - 1))).
+# Therefore, it would have already been marked since we would
+# have already completed the procedure for all numbers up till n
+# - 1.
 #
 # Again this uses the same property as Optimisation 2.
 

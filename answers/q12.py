@@ -8,13 +8,11 @@
 # without having to add all previous elements. This makes the
 # algorithm's time-complexity O(1).
 
-# https://en.wikipedia.org/wiki/Fibonacci_number
-
 import math
 
 
 def fib(n):
-    return math.floor((((1 + math.sqrt(5)) / 2) ** n) / math.sqrt(5) + 0.5)
+    return round((((1 + math.sqrt(5)) / 2) ** n) / math.sqrt(5))
 
 
 def sum_fib(n):
