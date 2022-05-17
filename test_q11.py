@@ -1,6 +1,9 @@
 import answers.q11 as q11
 import math
 
+# The algorithm are called with a number of different values and
+# there result is compared with the expected result upto 4
+# decimal places.
 
 print("`sin` Tests\n")
 
@@ -26,6 +29,8 @@ if 0.8439 == round(q11.cos(12), 4):
     print("Test Passed")
 else:
     print("Test Failed")
+
+# Further printing is being done to allow for manual testing.
 
 print("\nSine Output (In Radians)\n")
 

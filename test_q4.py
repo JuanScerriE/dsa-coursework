@@ -1,6 +1,8 @@
 import answers.q4 as q4
 import random
 
+# An array and its expected product equalities are defined. The
+# expected result is then compared to the actual result.
 
 print("Finding Products Test")
 
@@ -29,6 +31,9 @@ a = [random.randint(1, 1024) for k in range(64)]
 # a = [1,2,4,6,12,24]
 
 related = q4.find_products(a)
+
+# The found product equalities are printed. This allows for
+# further checking.
 
 for pair in related:
     if not pair[0].product_equals(pair[1]):

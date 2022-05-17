@@ -1,5 +1,8 @@
 import answers.q10 as q10
 
+# A number of arrays are defined along with there expected
+# output. The expected output is compared to the actual result.
+
 print("`max` Tests\n")
 
 if [88] == q10.max([88, 14, 1, 3, 7, 21, 59]):

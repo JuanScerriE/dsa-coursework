@@ -1,5 +1,7 @@
 import answers.q12 as q12
 
+# An array of generated Fibonacci sums is tested against the
+# expected array of Fibonacci sums.
 
 print("Fibonacci Test")
 

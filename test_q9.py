@@ -1,5 +1,7 @@
 import answers.q9 as q9
 
+# Three arrays and there expected duplicates are defined. The
+# result of the algorithm is compared to the expected output.
 
 print("Finding Duplicates Tests")
 

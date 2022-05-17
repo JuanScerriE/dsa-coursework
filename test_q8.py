@@ -1,5 +1,7 @@
 import answers.q8 as q8
 
+# Again the results of the algorithms are compared to the
+# expected results upto 4 decimal places.
 
 print("Newton Tests\n")
 
@@ -34,6 +36,8 @@ if 3.1623 == round(q8.halley_sqrt(10), 4):
     print("Test Passed")
 else:
     print("Test Failed")
+
+# Further output is made to allow for manual testing.
 
 print("\nNewton's Method\n")
 

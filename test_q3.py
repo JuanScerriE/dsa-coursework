@@ -2,6 +2,8 @@ import answers.q1 as q1
 import answers.q3 as q3
 import random
 
+# An array is defined and the result of the algorthim is
+# compared to the expected extremes of the array. 
 
 print("Extremes Tests\n")
 
@@ -28,6 +30,9 @@ print("\nChecking for extremes before sort...")
 q3.extremes(a)
 
 q1.shellsort(a)
+
+# If the array is sorted no extermes should be present. This is
+# because they are the negation of each other.
 
 print("\nSorted (Shellsort): ", a)
 print("\nChecking for extremes after sort...")

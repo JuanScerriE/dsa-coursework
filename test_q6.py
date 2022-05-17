@@ -1,5 +1,8 @@
 import answers.q6 as q6
 
+# A list of known primes is embedded in script to allow for
+# testing of the sieve and the primality test. Again comparison
+# to the expected result is made.
 
 known_primes = [
     2,

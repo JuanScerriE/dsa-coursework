@@ -1,5 +1,8 @@
 import answers.q5 as q5
 
+# Some test RPN expressions are intput into the lexer and
+# evaluated to check that the algorithm is parsing correctly and
+# to check that its output is accurate.
 
 print("RPN Calculator Tests")
 
@@ -17,6 +20,8 @@ if -829.125 == q5.evaluate(q5.lex("65 32 - 7 32.125 - *")):
     print("\nTest Passed\n")
 else:
     print("\nTest Failed\n")
+
+# Here a user can input an expression of his choice.
 
 expr = input("Input RPN Expression: ")
 

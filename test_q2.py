@@ -2,6 +2,9 @@ import answers.q1 as q1
 import answers.q2 as q2
 import random
 
+# For testing two predefined arrays are used. After the sorts
+# they are merged together in a way which preserves order. The
+# expected result is then compared to the actual result.
 
 print("Merge Test")
 
@@ -33,7 +36,7 @@ while True:
         break
 
 # Populate a with random integers.
-for i in range(len_a):
+for i in rangehhkken_a):
     a.append(random.randint(0, 1024))
 
 # Populate b with random integers.
