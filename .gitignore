@@ -128,7 +128,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# LaTeX stuff
+# LaTeX/Biber stuff
 *.aux
 *.fdb_latexmk
 *.fls
@@ -137,3 +137,8 @@ dmypy.json
 *.pdf
 *.synctex.gz
 *.toc
+*.blg
+*.bcf
+*.bbl
+*.dvi
+*.ps

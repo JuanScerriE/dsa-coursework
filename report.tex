@@ -26,6 +26,7 @@ marginparwidth=0pt]{geometry}
 \usepackage{svg}
 \usepackage{xcolor}
 \usepackage[T1]{fontenc}
+\usepackage{inputenc}
 \usepackage[utf8]{inputenx}
 \usepackage[unicode]{hyperref}
 \usepackage[shortlabels]{enumitem}
@@ -34,11 +35,10 @@ marginparwidth=0pt]{geometry}
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{tocloft}
-\usepackage[backend=biber]{biblatex}
 \usepackage{tikz}
+\usepackage[backend=biber]{biblatex}
 
 % MACROS & DEFS
-
 
 \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
 \newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
@@ -189,27 +189,27 @@ Algorithms 1 Coursework}
 
 \section{Statement of Completion}
 
-The statement of completion is a list of all the questions where
-attempted, which work and which have bugs.
+% The statement of completion is a list of all the questions where
+% attempted, which work and which have bugs.
 
-I, the undersigned, declare that the all questions have been
-attempted. I also declare that all the solutions have been
-tested and confirmed to work well (see list below).
+I, the undersigned, declare that all twelve questions have been
+attempted, and their solutions have been tested and confirmed to
+work well without any bugs. %(see list below).
 
-\begin{itemize}
-  \item \textit{Question 1} -- Attempted and works well.
-  \item \textit{Question 2} -- Attempted and works well.
-  \item \textit{Question 3} -- Attempted and works well.
-  \item \textit{Question 4} -- Attempted and works well.
-  \item \textit{Question 5} -- Attempted and works well.
-  \item \textit{Question 6} -- Attempted and works well.
-  \item \textit{Question 7} -- Attempted and works well.
-  \item \textit{Question 8} -- Attempted and works well.
-  \item \textit{Question 9} -- Attempted and works well.
-  \item \textit{Question 10} -- Attempted and works well.
-  \item \textit{Question 11} -- Attempted and works well.
-  \item \textit{Question 12} -- Attempted and works well.
-\end{itemize}
+% \begin{itemize}
+%   \item \textit{Question 1} -- Attempted and works well.
+%   \item \textit{Question 2} -- Attempted and works well.
+%   \item \textit{Question 3} -- Attempted and works well.
+%   \item \textit{Question 4} -- Attempted and works well.
+%   \item \textit{Question 5} -- Attempted and works well.
+%   \item \textit{Question 6} -- Attempted and works well.
+%   \item \textit{Question 7} -- Attempted and works well.
+%   \item \textit{Question 8} -- Attempted and works well.
+%   \item \textit{Question 9} -- Attempted and works well.
+%   \item \textit{Question 10} -- Attempted and works well.
+%   \item \textit{Question 11} -- Attempted and works well.
+%   \item \textit{Question 12} -- Attempted and works well.
+% \end{itemize}
 
 \vfill
 
@@ -219,25 +219,46 @@ tested and confirmed to work well (see list below).
 
 Juan Scerri
 
-\section{Language \& Testing Methodology}
+\section{Language, Comments \& Testing Methodology}
 
-The programming language which I decided to choose to do this
-assignment is Python 3. The main reason for chosing Python 3 was
-the speed of development.
+\subsection{Language}
 
-Each algorithm was tested using a separarte file, in general
-named \texttt{test\_q(n).py}, where \texttt{n} refers to the
-question number. Each file contains the expected results of the
-algorithms. Each file compares the expected results with the
-results of the algorithm. If the results match ``\texttt{Test
-Passed}'' will be printed otherwise ``\texttt{Test Failed}''
-will be printed. 
+The programming language which I chose to do this assignment is
+Python 3. The main reason for chosing Python 3 is the speed of
+development.
 
-Moreover, some usage of the algorithms was implemented in the
-test files. For example \textit{Question 1} required that we
-sort two arrays which have at least 256 elements and are of
-different lengths. Such functionality was implemented in the
-test files and can be seen in the dump screen for each question.
+\subsection{Comments}
+
+Throughout the assignment I wrote a lot of explanation directly in
+the comments of the code. In Python comments start with a
+\texttt{\#}. Moreover, in the listings comments have a grey
+color.
+
+\subsection{Testings Methodology}
+
+Each algorithm was tested using a separarte file. In general the
+file is \texttt{test\_q\{n\}.py}, where \texttt{n} refers to the
+question number.
+
+Each test script compares the results of the implemented
+algorithms with the expected results given a particular input.
+If the results match ``\texttt{Test Passed}'' is printed
+otherwise ``\texttt{Test Failed}'' is printed. 
+
+Moreover, usage for each question is also implemented in the
+respective test script. The usage is demonstrated in a screen
+dump.
+
+For example \textit{Question 1} requires the sorting of two
+arrays which have at least 256 elements and are of different
+length. The contents of each array is printed to ensure that
+they are being sorted. This as can be seen in the respective
+screen dump.
+
+\textit{Note:} Each screen dump is an instance of a test script
+running. It is \textbf{recommended} that each test script is
+rerun to ensure that it is functional and isomorphic to the
+equivalent screen dump in the report.
 
 \section{\textit{Question 1:} Shellsort \& Quicksort}
 
@@ -267,9 +288,9 @@ Quicksort algorithm was proposed by \textcite{hoare62}.
 
 \section{\textit{Question 3:} Finding Extremes}
 
-To show that if an array does not have extremes then it must be
-stored we need to define what it means for an array to be sorted
-and what it means for an array to have extremes.
+To show that, if an array does not have extremes, then it must
+be sorted, we need to define what it means for an array to be
+sorted and what it means for an array to have extremes.
 
 \begin{definition}
   A zero indexed array of size $n$, $A$, is said to be
@@ -330,7 +351,7 @@ definition of \textbf{sorted}).
 
 Therefore, an array has \textbf{extremes} if and only if it is
 \ul{not} \textbf{sorted}. Hence, if an array does \ul{not} have
-\textbf{extremes} then it must be \textbf{sorted}.
+\textbf{extremes}, then it must be \textbf{sorted}.
 
 \lstinputlisting[caption={Answer to \textit{Question
 3}},language=Python]{answers/q3.py}
@@ -356,7 +377,7 @@ For an explanation read the comments.
 
 \section{\textit{Question 5:} \texttt{RPN} Calculator}
 
-For an explanation read the comments.
+For an explanation read the comments below.
 
 \lstinputlisting[caption={Answer to \textit{Question
 5}},language=Python]{answers/q5.py}
@@ -370,8 +391,8 @@ For an explanation read the comments.
 \section{\textit{Question 6:} Finding Primes}
 
 The algorithm used for the sieve was inspired by
-\textcite{sorenson90}. For the optimisations read the comments
-in the code.
+\textcite{sorenson90}. For the optimisations, refer to the
+comments in the code.
 
 \lstinputlisting[caption={Answer to \textit{Question
 6}},language=Python]{answers/q6.py}
@@ -384,7 +405,7 @@ in the code.
 
 \section{\textit{Question 7:} Building a Binary Search Tree}
 
-For an explanation read the comments.
+For an explanation read the comments below.
 
 \lstinputlisting[caption={Answer to \textit{Question
 7}},language=Python]{answers/q7.py}
@@ -397,10 +418,15 @@ For an explanation read the comments.
 
 \section{\textit{Question 8:} Square Root Approximation}
 
-For an explanation read the comments.
+For an explanation read the comments below.
 
 \lstinputlisting[caption={Answer to \textit{Question
 8}},language=Python]{answers/q8.py}
+
+The \texttt{halley\_sqrt()} function is an implementation of an
+alternative root-finding algorithm \cite{wolframhalley} which
+converges faster than Newton's method. However, the computation
+is much more expensive which might result in it being slower.
 
 \lstinputlisting[caption={Test for \textit{Question 8}
 },language=Python]{test_q8.py}
@@ -410,7 +436,7 @@ For an explanation read the comments.
 
 \section{\textit{Question 9:} Finding Duplicates}
 
-For an explanation read the comments.
+For an explanation read the comments below.
 
 \lstinputlisting[caption={Answer to \textit{Question
 9}},language=Python]{answers/q9.py}
@@ -423,7 +449,7 @@ For an explanation read the comments.
 
 \section{\textit{Question 10:} Recursive \texttt{max()}}
 
-For an explanation read the comments.
+For an explanation read the comments below.
 
 \lstinputlisting[caption={Answer to \textit{Question
 10}},language=Python]{answers/q10.py}
@@ -436,7 +462,7 @@ For an explanation read the comments.
 
 \section{\textit{Question 11:} Cosine/Sine Approximation}
 
-For an explanation read the comments.
+For an explanation read the comments below.
 
 \lstinputlisting[caption={Answer to \textit{Question
 11}},language=Python]{answers/q11.py}
@@ -449,8 +475,8 @@ For an explanation read the comments.
 
 \section{\textit{Question 12:} Fibonacci Sums}
 
-To find Fibonacci sums very quickly we can use the two results
-listed below \cite{wikifib}.
+To find Fibonacci sums very quickly, the two results listed
+below \cite{wikifib} can be used.
 
 \begin{align}
   F_n = \round{\frac{\phi^n}{\sqrt{5}}}, \quad \phi = \frac{1 +
@@ -469,7 +495,7 @@ relation defined as
 \end{align}
 
 However, there exists a closed-form expression called Binet's
-Formula \cite{wolframfib} and it is
+Formula \cite{wolframfib} which is the following
 
 \begin{align*}
   F_n = \frac{\phi^n - (-\phi)^n}{\sqrt{5}}.

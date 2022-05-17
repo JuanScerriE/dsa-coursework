@@ -1,7 +1,8 @@
 # This is a very compact recursive algorithm for finding the
-# maximum inspired by merge sort. The first implementation `max`
-# returns a singleton with the largest element of the provided
-# list. However, it has three recursive calls instead of two.
+# maximum, inspired by merge sort. The first implementation
+# `max` returns a singleton with the largest element of the
+# provided list. However, it has three recursive calls instead
+# of two.
 
 # `max_2` is similar to `max` it however eliminates the need for
 # the third recursive call.

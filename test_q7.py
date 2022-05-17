@@ -1,11 +1,11 @@
 import answers.q7 as q7
 
 
-# If you input the following sequence in order:
+# If the following sequence is inputted in order:
 #
 #     12, 34, 13, 56, 9, 11, 7, 5, 3
 #
-# You should getting the following tree.
+# The following tree is the outcome:
 #
 #          56
 #        /

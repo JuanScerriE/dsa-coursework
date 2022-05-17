@@ -29,8 +29,8 @@ class Node:
                 self.left.add(node)
 
     # The draw method is an inorder traversal of the BST.
-    # Specifically, we first print the right sub-tree, then the
-    # root and then the left sub-tree.
+    # Specifically, the right sub-tree will be printed first, then the
+    # root and lastly the left sub-tree.
     #
     # The draw method has two parameters, s and parent. s is the
     # string which will be printed before the actual value is

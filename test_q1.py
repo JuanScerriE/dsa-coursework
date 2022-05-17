@@ -1,6 +1,8 @@
 import answers.q1 as q1
 import random
 
+# For testing a predefined array is used and the result of the
+# sorts are compared against the expected output.
 
 print("Shellsort Test")
 
@@ -42,8 +44,10 @@ for i in range(len_a):
 for i in range(len_b):
     b.append(random.randint(0, 1024))
 
+print("Length of a: ", len_a)
+print("Length of b: ", len_b)
 
-print("Unsorted (Shellsort): ", a)
+print("\nUnsorted (Shellsort): ", a)
 q1.shellsort(a)
 print("Sorted (Shellsort): ", a)
 
