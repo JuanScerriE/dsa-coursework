@@ -1,7 +1,7 @@
 import answers.q8 as q8
 
 # Again the results of the algorithms are compared to the
-# expected results upto 4 decimal places.
+# expected results up to 4 decimal places.
 
 print("Newton Tests\n")
 

@@ -1,9 +1,9 @@
 import answers.q11 as q11
 import math
 
-# The algorithm are called with a number of different values and
-# there result is compared with the expected result upto 4
-# decimal places.
+# The algorithm is called with a number of different values. The
+# results are compared to the expected output up to 4 decimal
+# places of accuracy.
 
 print("`sin` Tests\n")
 
