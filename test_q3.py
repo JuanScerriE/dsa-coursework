@@ -3,7 +3,7 @@ import answers.q3 as q3
 import random
 
 # An array is defined and the result of the algorthim is
-# compared to the expected extremes of the array. 
+# compared to the expected extremes of the array.
 
 print("Extremes Tests\n")
 

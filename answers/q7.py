@@ -6,9 +6,11 @@ class Branch(Enum):
     Root = 1
     Right = 2
 
+
 # The Node class is a class which holds a value and two pointers
 # which will be populated with addresses to similar Node objects
 # creating a tree structure.
+
 
 class Node:
     def __init__(self, value):

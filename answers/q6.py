@@ -37,10 +37,6 @@ import math
 # Hence, all composite numbers smaller than the limit will have
 # at least one prime factor which is smaller than or equal to
 # the square root of the limit. (p <= q <=> sqrt(p) <= sqrt(q))
-#
-# Therefore, all composite numbers up till the limit must have
-# factors which are smaller than or equal to the square root of
-# the limit.
 
 # Optimisation 3: Start by crossing out from the square of the
 # index (n^2) instead of the index (n).
@@ -50,7 +46,7 @@ import math
 # smaller than the index (n - 1 = floor(sqrt(n^2 - 1))).
 # Therefore, it would have already been marked since the
 # procedure for all numbers up till n (including n - 1) would
-# have already been completed. 
+# have already been completed.
 #
 # Again this uses the same property as Optimisation 2.
 

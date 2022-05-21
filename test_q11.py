@@ -1,9 +1,9 @@
 import answers.q11 as q11
 import math
 
-# The algorithm is called with a number of different values. The
-# results are compared to the expected output up to 4 decimal
-# places of accuracy.
+# The sine and cosine functions are called with a number of
+# different values. The results are compared to the expected
+# output up to 4 decimal places of accuracy.
 
 print("`sin` Tests\n")
 

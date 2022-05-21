@@ -17,8 +17,8 @@
 # This means that this algorithm has an average time-complexity
 # of O(2n) ( = O(n) ) since the algorithm loops over each
 # element twice: once to index the elements in the dictionary
-# and the other time to check which ones have duplicates. 
-# 
+# and the other time to check which ones have duplicates.
+#
 # Moreover, the space-complexity of our algorithm is also O(2n)
 # since we are creating a second array to hold all the values
 # which have duplicates, in addition to the space-complexity of
@@ -27,6 +27,7 @@
 # Note: The above is only discussing the average case
 # time-complexity. The worst case time-complexity is O(n^2).
 # However, this is very unlikely.
+
 
 def find_dups(list):
     dict = {}

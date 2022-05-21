@@ -7,6 +7,7 @@
 # `max_2` is similar to `max` it however eliminates the need for
 # the third recursive call.
 
+
 def max(list):
     if len(list) == 1:
         return [list[0]]

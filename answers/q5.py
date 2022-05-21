@@ -2,6 +2,7 @@
 # traverse a string. Even between function calls since the
 # object is allocated on the heap and a pointer is passed.
 
+
 class PeekStream:
     def __init__(self, stream):
         self.stream = stream
@@ -38,6 +39,7 @@ class PeekStream:
 # The Token class is defining unit of data which our program
 # can easily manipulate.
 
+
 class Token:
     def __init__(self, typ, val):
         self.typ = typ
@@ -58,8 +60,10 @@ class Token:
     def get_val(self):
         return self.val
 
+
 # The Stack class is at best a wrapper around Python arrays to
 # make them behave more like a stack.
+
 
 class Stack:
     def __init__(self):
@@ -99,8 +103,9 @@ def get_num(peek_expr):
 
     floating = False
 
-    while peek_expr.peek() != None and ("0" <= peek_expr.peek() <=
-            "9" or peek_expr.peek() == "."):
+    while peek_expr.peek() != None and (
+        "0" <= peek_expr.peek() <= "9" or peek_expr.peek() == "."
+    ):
         if peek_expr.peek() == ".":
             if not floating:
                 floating = True
@@ -136,8 +141,9 @@ def lex(expr):
 
     return tok_list
 
+
 # The evaluate function expects a RPN statement which can then
-# be evaluated. 
+# be evaluated.
 def evaluate(tok_list):
     stack = Stack()
 
