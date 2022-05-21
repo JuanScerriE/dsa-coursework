@@ -27,5 +27,5 @@ python test_q1.py
 
 **Note:** The Python 3 executable might be under a different
 alias/name. You might need to write `python3` instead of
-`python`. (This is done to make sure there are not conflicts
+`python`. (This is done to make sure there are no conflicts
 between Python 2 and Python 3.)
